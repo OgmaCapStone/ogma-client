@@ -75,7 +75,8 @@ This app was created with 💚 by:
 > Juan Camilo Garcés &nbsp;&middot;&nbsp;
 > Frontend Developer &nbsp;&middot;&nbsp;
 
-> Juan Daniel Martínez &nbsp;&middot;&nbsp; > [juanda.dev](https://juanda.dev) &nbsp;&middot;&nbsp;
+> Juan Daniel Martínez &nbsp;&middot;&nbsp;
+> [juanda.dev](https://juanda.dev) &nbsp;&middot;&nbsp;
 > Frontend Developer &nbsp;&middot;&nbsp;
 > GitHub [@juandadev](https://github.com/juandadev) &nbsp;&middot;&nbsp;
 > Twitter [@juanda*dev*](https://twitter.com/juanda_dev_)
