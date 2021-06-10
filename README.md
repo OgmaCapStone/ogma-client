@@ -1,34 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  <br>
+  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://imgur.com/4yYkmW8.png" alt="Ogma app logo" width="200"></a>
+  <br>
+  Ogma App
+  <br>
+</h1>
 
-## Getting Started
+<h4 align="center">Test and share your dev skills.</h4>
 
-First, run the development server:
+<!-- <p align="center">
+  <a href="https://badge.fury.io/js/electron-markdownify">
+    <img src="https://badge.fury.io/js/electron-markdownify.svg"
+         alt="Gitter">
+  </a>
+  <a href="https://gitter.im/amitmerchant1990/electron-markdownify"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
+  <a href="https://saythanks.io/to/bullredeyes@gmail.com">
+      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
+  </a>
+  <a href="https://www.paypal.me/AmitMerchant">
+    <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
+  </a>
+</p> -->
+
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#collaborators">Collaborators</a>
+</p>
+
+<!-- ![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif) -->
+
+## Key Features
+
+- Register with your social media accounts or credentials.
+- Choose a technology or language, so that you can practice for a job interview or just to test skills.
+- Choose the difficulty level of the questions provided.
+- See your level and progress as a programmer on your profile.
+- Earn badges for your effort passing different tests.
+
+## How To Use
+
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone this repository
+$ git clone https://github.com/OgmaCapStone/ogma-client.git
+
+# Go into the repository
+$ cd ogma-client
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Credits
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+This software uses the following open source packages:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- [NextJS](https://nextjs.org/)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+With the supervision of [Erik Ochoa](https://twitter.com/Elyager), Academic Coach at [Platzi Master](https://platzi.com/master/)
 
-## Learn More
+## Collaborators
 
-To learn more about Next.js, take a look at the following resources:
+This app was created with 💚 by:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> Elsa Portilla &nbsp;&middot;&nbsp;
+> Frontend Developer &nbsp;&middot;&nbsp;
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+> Juan Camilo Garcés &nbsp;&middot;&nbsp;
+> Frontend Developer &nbsp;&middot;&nbsp;
 
-## Deploy on Vercel
+> Juan Daniel Martínez &nbsp;&middot;&nbsp; > [juanda.dev](https://juanda.dev) &nbsp;&middot;&nbsp;
+> Frontend Developer &nbsp;&middot;&nbsp;
+> GitHub [@juandadev](https://github.com/juandadev) &nbsp;&middot;&nbsp;
+> Twitter [@juanda*dev*](https://twitter.com/juanda_dev_)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+> Sebastián Ballen &nbsp;&middot;&nbsp;
+> Frontend Developer &nbsp;&middot;&nbsp;
