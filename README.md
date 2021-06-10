@@ -71,14 +71,28 @@ This app was created with 💚 by:
 
 > Elsa Portilla &nbsp;&middot;&nbsp;
 > Frontend Developer &nbsp;&middot;&nbsp;
+> LinkedIn [@elsaportilla](https://www.linkedin.com/in/elsaportilla/) &nbsp;&middot;&nbsp;
+> GitHub [@elsargentpepper](https://github.com/elsargentpepper) &nbsp;&middot;&nbsp;
+
+> Jorge Delgadillo &nbsp;&middot;&nbsp;
+> Backend Developer ([backend repo](https://github.com/OgmaCapStone/Backend)) &nbsp;&middot;&nbsp;
+> LinkedIn [@jorge-alberto-delgadillo-alonso-7b58501aa](https://www.linkedin.com/in/jorge-alberto-delgadillo-alonso-7b58501aa/) &nbsp;&middot;&nbsp;
+> GitHub [@49122](https://github.com/49122) &nbsp;&middot;&nbsp;
 
 > Juan Camilo Garcés &nbsp;&middot;&nbsp;
 > Frontend Developer &nbsp;&middot;&nbsp;
+> LinkedIn [@juancamilogarcesviveros](https://www.linkedin.com/in/juancamilogarcesviveros/) &nbsp;&middot;&nbsp;
+> GitHub [@camilogarcesv](https://github.com/camilogarcesv) &nbsp;&middot;&nbsp;
+> Twitter [@Camilo_GarcesV](https://twitter.com/Camilo_GarcesV) &nbsp;&middot;&nbsp;
 
-> Juan Daniel Martínez &nbsp;&middot;&nbsp; > [juanda.dev](https://juanda.dev) &nbsp;&middot;&nbsp;
+> Juan Daniel Martínez &nbsp;&middot;&nbsp;
 > Frontend Developer &nbsp;&middot;&nbsp;
+> [juanda.dev](https://juanda.dev) &nbsp;&middot;&nbsp;
 > GitHub [@juandadev](https://github.com/juandadev) &nbsp;&middot;&nbsp;
-> Twitter [@juanda*dev*](https://twitter.com/juanda_dev_)
+> Twitter [@juanda_dev_](https://twitter.com/juanda_dev_)
 
 > Sebastián Ballen &nbsp;&middot;&nbsp;
 > Frontend Developer &nbsp;&middot;&nbsp;
+> [sebastianbc09.github.io](https://sebastianbc09.github.io/v3/) &nbsp;&middot;&nbsp;
+> LinkedIn [@sebastian-ballen-87851518a](https://www.linkedin.com/in/sebastian-ballen-87851518a/) &nbsp;&middot;&nbsp;
+> GitHub [@SebastianBC09](https://github.com/SebastianBC09) &nbsp;&middot;&nbsp;
