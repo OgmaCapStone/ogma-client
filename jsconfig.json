@@ -6,7 +6,8 @@
       "@database/*": ["src/utils/database/*"],
       "@reducers/*": ["src/utils/reducers/*"],
       "@icons": ["src/icons/index"],
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/components/*"],
+      "@styles/*": ["styles/*"]
     }
   }
 }

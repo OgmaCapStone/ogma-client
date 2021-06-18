@@ -1,0 +1,25 @@
+.layout {
+  &__background {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(119.62deg, #eaf0f1 9.06%, #dcf4f8 79.38%);
+    overflow: hidden;
+  }
+  &__circle {
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    background: #bde9eb;
+    filter: blur(124px);
+    -webkit-filter: blur(124px);
+    &_top {
+      top: -20rem;
+      right: -20rem;
+    }
+    &_bottom {
+      bottom: -20rem;
+      left: -20rem;
+    }
+  }
+}
