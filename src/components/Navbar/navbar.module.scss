@@ -1,0 +1,74 @@
+.header {
+  background: #286064;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  width: 1366px;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px;
+}
+
+.navbarBrand {
+  bottom: 2.9%;
+  color: #ffffff;
+  flex: none;
+  flex-grow: 0;
+  left: 0%;
+  margin: 0px 397px;
+  order: 0;
+  position: static;
+  right: 86.18%;
+  top: 2.9%;
+}
+
+.btnNavbar {
+  bottom: 21.01%;
+  flex: none;
+  flex-grow: 0;
+  left: 81.63%;
+  margin: 0px 397px;
+  order: 1;
+  position: static;
+  right: 0%;
+  top: 21.01%;
+}
+
+.btnLogin {
+  align-items: center;
+  background: #286064;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 25px;
+  bottom: 21.01%;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  left: 81.63%;
+  right: 11.04%;
+  position: absolute;
+  padding: 11.4177px 16px;
+  top: 21.01%;
+}
+
+.btnStart {
+  align-items: center;
+  background: #6da8aa;
+  border: none;
+  border-radius: 25px;
+  bottom: 21.01%;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  left: 89.88%;
+  padding: 11.4177px 16px;
+  position: absolute;
+  right: 0%;
+  top: 21.01%;
+}

@@ -1,16 +1,18 @@
 import React from 'react'
+import styles from '../Navbar/navbar.module.scss'
 
 
 const Navbar = () => {
   return (
-    <section className="navbar">
-      <section className="navbar-brand">
-        <a href=""></a>
-        <img src="" alt="" />
-      </section>
-      <section className="navbar-buttons">
-        <button>Log In</button>
-        <button>Start Now</button>
+    <section className={styles.header}>
+      <section className={styles.navbar}>
+        <section className={styles.navbarBrand}>
+          <h1>Ogma</h1>
+        </section>
+        <section className={styles.btnNavbar}>
+          <button className={styles.btnLogin}>Log In</button>
+          <button className={styles.btnStart}>Start Now</button>
+        </section>
       </section>
     </section>
   )
