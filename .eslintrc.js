@@ -30,5 +30,6 @@ module.exports = {
     "import/no-cycle": ["off"],
     "react/no-array-index-key": ["off"],
     "no-param-reassign": ["error", { props: false }],
+    "no-case-declarations": ["off"],
   },
 };
