@@ -1,6 +1,7 @@
 import React, { useReducer } from "react";
 import Link from "next/link";
 import { initialState, reducer } from "@reducers/login";
+import { GithubIcon, GoogleIcon } from "@icons";
 
 export default function login() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -34,8 +35,12 @@ export default function login() {
       </form>
       <p>or</p>
       <div>
-        <button type="button">Google</button>
-        <button type="button">GitHub</button>
+        <button type="button">
+          <GoogleIcon size={16} /> Google
+        </button>
+        <button type="button">
+          <GithubIcon size={16} /> GitHub
+        </button>
       </div>
       <p>
         Don&apos;t have an account? <Link href="/signup">Sign up</Link>
