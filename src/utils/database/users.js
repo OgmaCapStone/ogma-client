@@ -10,7 +10,7 @@ export const authenticateUser = async () => true;
 
 export const createUser = async (data) => {
   const res = axios
-    .post(`${ENDPOINT_URL}//users/create`, data)
+    .post(`${ENDPOINT_URL}/users/create`, data)
     .then((res) => res.data);
 
   return res;
