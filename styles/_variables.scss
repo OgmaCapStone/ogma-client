@@ -1,0 +1,49 @@
+// Colors
+$color-light-primary: #e4ebec;
+$color-dark-charcoal: #2f2a32;
+$color-charcoal-light: #403845;
+$color-primary: #286064;
+$color-secondary: #6da8aa;
+$color-charcoal: #37313c;
+$color-text-grey: #605866;
+$color-text-dark: #aea8b2;
+$color-grey: #f1ebf5;
+$color-white: #ffffff;
+$color-danger: #d8000c;
+$color-warning: #9f6000;
+$color-success: #4f8a10;
+$color-danger-container: #ffd2d2;
+$color-warning-container: #feefb3;
+$color-success-container: #dff2bf;
+
+// Shadows
+$shadow-large-drop: 0px 32px 64px rgba(28, 37, 44, 0.08);
+$blur-drop-shadow: blur(15px);
+
+//Radius
+$border-radius-size: 30px;
+
+// Size
+$base: 0.4rem;
+
+// Size Destktop
+$sizeHeadline1Destktop: $base * 13.75;
+$sizeHeadline2Destktop: $base * 10;
+$sizeHeadline3Desktop: $base * 7.5;
+$sizeHeadline4Desktop: $base * 5.25;
+$sizeButtonTextDesktop: $base * 5.25;
+$sizeBodyDestktop: $base * 4.5;
+$sizeLogoDesktop: $base * 15;
+
+//Mobile
+$sizeHeadline1Mobile: $base * 9;
+$sizeHeadline2Mobile: $base * 6.5;
+$sizeHeadline3Mobile: $base * 5;
+$sizeHeadline4Mobile: $base * 4.5;
+$sizeButtonTextMobile: $base * 4.5;
+$sizeBodyMobile: $base * 4;
+$sizeLogoMobile: $base * 6;
+
+// Font Family
+$fontTitle: "Spartan", sans-serif;
+$fontSecondary: "Nunito Sans", sans-serif;

@@ -1,0 +1,86 @@
+@import "./variables";
+
+// --------------Mobile------------------
+@mixin tittleMobile {
+  font-family: $fontTitle;
+  font-size: $sizeHeadline1Mobile;
+  font-weight: bold;
+}
+
+@mixin subTittleMobile {
+  font-family: $fontTitle;
+  font-size: $sizeHeadline2Mobile;
+  font-weight: bold;
+}
+@mixin headline3Mobile {
+  font-family: $fontTitle;
+  font-size: $sizeHeadline3Mobile;
+  font-weight: bold;
+}
+
+@mixin headline4Mobile {
+  font-family: $fontTitle;
+  font-size: $sizeHeadline4Mobile;
+  font-weight: 500;
+}
+
+@mixin BodyTextMobile {
+  font-family: $fontSecondary;
+  font-size: $sizeBodyMobile;
+  font-weight: normal;
+}
+
+@mixin BodyTextBoldMobile {
+  font-family: $fontSecondary;
+  font-size: $sizeBodyMobile;
+  font-weight: bold;
+}
+
+@mixin ButtonTextMobile {
+  font-family: $fontSecondary;
+  font-size: $sizeButtonTextMobile;
+  font-weight: bold;
+}
+
+// --------------Desktop------------------
+
+@mixin tittleDesktop {
+  font-family: $fontTitle;
+  font-size: $sizeHeadline1Desktop;
+  font-weight: bold;
+}
+
+@mixin subTittleDesktop {
+  font-family: $fontTitle;
+  font-size: $sizeHeadline2Desktop;
+  font-weight: bold;
+}
+@mixin headline3Desktop {
+  font-family: $fontTitle;
+  font-size: $sizeHeadline3Desktop;
+  font-weight: bold;
+}
+
+@mixin headline4Desktop {
+  font-family: $fontTitle;
+  font-size: $sizeHeadline4Desktop;
+  font-weight: 500;
+}
+
+@mixin BodyTextDesktop {
+  font-family: $fontSecondary;
+  font-size: $sizeBodyDesktop;
+  font-weight: normal;
+}
+
+@mixin BodyTextBoldDesktop {
+  font-family: $fontSecondary;
+  font-size: $sizeBodyDesktop;
+  font-weight: bold;
+}
+
+@mixin ButtonTextDesktop {
+  font-family: $fontSecondary;
+  font-size: $sizeButtonTextDesktop;
+  font-weight: bold;
+}
