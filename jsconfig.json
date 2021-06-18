@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "@database/*": ["src/utils/database/*"],
+      "@reducers/*": ["src/utils/reducers/*"],
+      "@icons": ["src/icons/index"]
+    }
+  }
+}
