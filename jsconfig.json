@@ -5,7 +5,9 @@
     "paths": {
       "@database/*": ["src/utils/database/*"],
       "@reducers/*": ["src/utils/reducers/*"],
-      "@icons": ["src/icons/index"]
+      "@icons": ["src/icons/index"],
+      "@components/*":["src/components/*"],
+      "@styles/*":["styles/*"]
     }
   }
 }
