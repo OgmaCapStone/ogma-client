@@ -1,11 +1,12 @@
-@import "../styles/mixins";
 @import "../styles/variables";
 
 .header {
   background: $color-primary;
   position: absolute;
-  width: 1440px;
-  height: 70px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 }
 
 .navbar {
@@ -13,72 +14,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0px;
-  position: absolute;
-  width: 1146px;
-  height: 69px;
-  left: 147px;
-  top: 1px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .navbar_brand {
   color: $color-white;
 }
-
-/* Media Queries */
-
-/* Mobile */
-@media(min-width: 56px) and (max-width: 320px) {
-  .header {
-    position: absolute;
-    width: 360px;
-    height: 49px;
-  }
-  .navbar {
-    width: 330px;
-    height: 49px;
-    left: 15px;
-    top: 0px;
-  }
-}
-
-@media(min-width: 321px) and (max-width: 375px) {
-  .header {
-    width: 415px;
-    height: 49px;
-  }
-  .navbar {
-    width: 385px;
-    height: 49px;
-    left: 15px;
-    top: 0px;
-  }
-}
-
-@media(min-width: 376px) and (max-width: 414px) {
-  .header {
-    width: 454px;
-    height: 49px;
-  }
-  .navbar {
-    width: 424px;
-    height: 49px;
-    left: 15px;
-    top: 0px;
-  }
-}
-
-/* Tablet */
-@media(min-width: 415px) and (max-width: 768px) {
-  .header {
-    width: 808px;
-    height: 49px;
-  }
-  .navbar {
-    width: 778px;
-    height: 49px;
-    left: 15px;
-    top: 0px;
-  }
-}
-

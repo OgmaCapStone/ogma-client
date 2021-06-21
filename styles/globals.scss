@@ -21,11 +21,18 @@ body {
   background: linear-gradient(119.62deg, #eaf0f1 9.06%, #dcf4f8 79.38%);
 }
 
+.main {
+  min-height: 100vh;
+  &.container {
+    padding-top: 4.7rem;
+    padding-bottom: 4.7rem;
+  }
+}
+
 .container {
   margin: auto;
   width: 100%;
   padding: 0 15px;
-
   @media (min-width: $breakpoint-sm) {
     max-width: 540px;
   }
