@@ -1,12 +1,14 @@
 import React from "react";
+import Header from "@components/Navbar";
+import Footer from "@components/Footer";
 import styles from "@styles/Layout.module.scss";
 
 export default function Layout({ children, header, footer }) {
   return (
     <div className={styles.layout__background}>
-      {header && <header>Ogma app</header>}
+      {header && <Header />}
       {children}
-      {footer && <footer>&copy; 2021 | Ogma app</footer>}
+      {footer && <Footer />}
       <div
         className={`${styles.layout__circle} ${styles.layout__circle_top}`}
       />

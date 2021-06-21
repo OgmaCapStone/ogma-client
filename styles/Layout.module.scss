@@ -1,10 +1,10 @@
 .layout {
   &__background {
     position: relative;
-    width: 100vw;
     min-height: 100vh;
     background: linear-gradient(119.62deg, #eaf0f1 9.06%, #dcf4f8 79.38%);
     overflow: hidden;
+    min-width: 1140px;
   }
   &__circle {
     position: absolute;

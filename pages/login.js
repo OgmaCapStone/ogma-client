@@ -13,7 +13,7 @@ export default function login() {
   }
 
   return (
-    <Layout>
+    <Layout header footer>
       <div className={styles.login__container}>
         <form onSubmit={handleSubmit}>
           <label htmlFor="email">
