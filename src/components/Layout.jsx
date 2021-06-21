@@ -1,6 +1,8 @@
 import React from "react";
-import Header from "@components/Navbar";
-import Footer from "@components/Footer";
+import dynamic from "next/dynamic";
+
+const Header = dynamic(() => import("@components/Navbar"));
+const Footer = dynamic(() => import("@components/Footer"));
 
 export default function Layout({ children, header, footer }) {
   return (
