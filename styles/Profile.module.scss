@@ -47,14 +47,14 @@
 .profile_content {
   display: grid;
   height: 173px;
-  grid-template-rows: 58px 58px 58px;
+  grid-template-rows: 43px 43px 43px 43px;
   grid-template-columns: 100%;
   position: relative;
   top: 4px;
 }
 
 .profile_name {
-  grid-row: 1/2;
+  grid-row: 2/3;
   h1 {
     color: #000000;
     font-family: $fontTitle;
@@ -67,7 +67,7 @@
 }
 
 .profile_sub {
-  grid-row: 2/3;
+  grid-row: 3/4;
   span {
     color: rgba(0, 0, 0, 0.5);
     font-family: $fontSecondary;
@@ -81,34 +81,32 @@
     position: absolute;
     height: 19px;
     left: 129px;
-    top: 67px;
+    top: 86px;
   }
   #techs {
     position: absolute;
     width: 138px;
     height: 19px;
     left: 110px;
-    bottom: 67px;
+    bottom: 48px;
   }
 }
 
 .profile_btn {
-  grid-row: 3/4;
+  grid-row: 4/5;
   .start_btn {
     @include ButtonTextMobile;
-    align-items: center;
     background: $color-primary;
     border: none;
     border-radius: $border-radius-size;
     box-shadow: 0px 14px 23px rgba(28, 37, 44, 0.08);
     color: $color-white;
     font-size: 21px;
-    flex-direction: row;
-    height: 61px;
-    left: 84px;
-    padding: 14px 34px;
+    height: 38px;
+    left: 94px;
     position: absolute;
-    width: 191px;
+    width: 168px;
+    margin: 3px 0 0 0px;
   }
 }
 
@@ -116,7 +114,7 @@
   height: 288px;
   h1 {
     color: #000000;
-    font-family:$fontTitle;
+    font-family: $fontTitle;
     font-weight: bold;
     font-size: 20px;
     left: 15px;
