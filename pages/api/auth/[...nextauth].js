@@ -1,9 +1,32 @@
 import NextAuth from "next-auth";
 import Providers from "next-auth/providers";
+import { compareSync } from "bcrypt";
+import { getUser } from "@database/users";
 
 const providers = [
   Providers.Credentials({
     name: "Credentials",
+    authorize: async (credentials) => {
+      const user = await getUser(credentials.username)
+        .then((res) => res.response)
+        .catch((err) => {
+          const { message } = err.response.data;
+
+          throw new Error(message);
+        });
+
+      if (user) {
+        if (compareSync(credentials.password, user.password)) {
+          return {
+            name: user.name,
+            email: user.email,
+            image: user.image,
+          };
+        }
+      }
+
+      return false;
+    },
   }),
   Providers.Google({
     name: "Google",
