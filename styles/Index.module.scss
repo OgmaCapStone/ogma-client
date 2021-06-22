@@ -1,35 +1,63 @@
 @import "./variables";
 @import "./mixins";
 
-.main {
+.landing {
+    &__main {
     display: flex;
     flex-direction: column;
-
-    .heroImage {
+    }
+    &__heroImage {
         display: none;
     }
-    .heroInfo{
+    &__heroInfo{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 40%;
-        .title {
-            @include tittleMobile;
-            text-transform: uppercase;
+        margin-top: 25%;
+    }
+    &__title {
+        @include tittleMobile;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    &__text {
+        @include BodyTextBoldMobile;
+        margin-top: 30px;
         }
-        .text {
-            @include BodyTextBoldMobile;
-            margin-top: 30px;
+    &__primaryBtn {
+        @include ButtonPrimaryMobile;
+        margin-top: 20px;
+        a {
+            color: $color-white;
         }
-        .primaryBtn {
-            @include ButtonPrimaryMobile;
-            margin-top: 20px;
-            a {
-                color: $color-white;
-            }
+    }
+}
+
+@media screen and (min-width: $breakpoint-lg){
+    .landing{
+        &__title {
+            @include tittleDesktop;
         }
-        .input {
-            @include InputActiveDesktop;
+        &__text {
+            @include BodyTextBoldDesktop
+        }
+        &__primaryBtn {
+            @include ButtonPrimaryDesktop;
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-xl){
+    .landing{
+        &__main {
+            flex-direction: row;
+            justify-content: center;
+        }
+        &__heroImage{
+            display: flex;
+        }
+        &___heroInfo {
+            margin-top: 0;
         }
     }
 }
