@@ -1,15 +1,6 @@
 @import "../styles/mixins";
 @import "../styles/variables";
 
-.main_container {
-  background: linear-gradient(119.62deg, #eaf0f1 9.06%, #dcf4f8 79.38%);
-  height: 576px;
-  left: 0px;
-  position: absolute;
-  top: 49px;
-  width: 360px;
-}
-
 .profile_container {
   height: 288px;
 }
@@ -22,10 +13,10 @@
     ),
     url(/public/images/double-bubble.png);
   height: 115px;
-  left: calc(50% - 360px / 2);
   position: absolute;
-  top: 0px;
-  width: 360px;
+  top:4.7rem;
+  left: 0;
+  width: 100%
 }
 
 #profile_pic {
@@ -40,7 +31,7 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  top: 60px;
+  top: 20%;
   width: 110px;
 }
 
@@ -80,14 +71,14 @@
   #level {
     position: absolute;
     height: 19px;
-    left: 129px;
+    margin: 0 32%;
     top: 86px;
   }
   #techs {
     position: absolute;
     width: 138px;
     height: 19px;
-    left: 110px;
+    margin: 0 26%;
     bottom: 48px;
   }
 }
@@ -103,10 +94,9 @@
     color: $color-white;
     font-size: 21px;
     height: 38px;
-    left: 94px;
     position: absolute;
     width: 168px;
-    margin: 3px 0 0 0px;
+    margin: 3px 20% 0px;
   }
 }
 
