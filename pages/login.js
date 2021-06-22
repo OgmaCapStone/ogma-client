@@ -17,6 +17,7 @@ export default function login() {
     signIn("credentials", {
       username: state.email,
       password: state.password,
+      callbackUrl: "/",
       redirect: false,
     }).then((res) => res.url && router.push("/profile"));
   }
@@ -56,10 +57,18 @@ export default function login() {
         </form>
         <p className={styles.login__divider}>or</p>
         <div className={styles.login__buttons}>
-          <button type="button" className={styles.login__google}>
+          <button
+            type="button"
+            className={styles.login__google}
+            onClick={() => signIn("google", { callbackUrl: "/profile" })}
+          >
             <GoogleIcon size={16} color="#fff" /> Google
           </button>
-          <button type="button" className={styles.login__github}>
+          <button
+            type="button"
+            className={styles.login__github}
+            onClick={() => signIn("github", { callbackUrl: "/profile" })}
+          >
             <GithubIcon size={16} color="#fff" /> GitHub
           </button>
         </div>
