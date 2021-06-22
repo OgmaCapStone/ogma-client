@@ -15,38 +15,48 @@ export default function login() {
   return (
     <Layout header footer>
       <div className={styles.login__container}>
+        <h1 className={styles.login__h1}>Log In</h1>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="email">
-            Email
-            <input
-              name="email"
-              type="email"
-              value={state.email}
-              onChange={(e) => dispatch({ type: "change", e })}
-            />
-          </label>
-          <label htmlFor="password">
-            Password
-            <input
-              name="password"
-              type="password"
-              value={state.password}
-              onChange={(e) => dispatch({ type: "change", e })}
-            />
-          </label>
-          <button type="submit">Log In</button>
-        </form>
-        <p>or</p>
-        <div>
-          <button type="button">
-            <GoogleIcon size={16} /> Google
+          <div className={styles.login__group}>
+            <label htmlFor="email">
+              Email
+              <input
+                name="email"
+                type="email"
+                value={state.email}
+                onChange={(e) => dispatch({ type: "change", e })}
+              />
+            </label>
+          </div>
+          <div className={styles.login__group}>
+            <label htmlFor="password">
+              Password
+              <input
+                name="password"
+                type="password"
+                value={state.password}
+                onChange={(e) => dispatch({ type: "change", e })}
+              />
+            </label>
+          </div>
+          <button type="submit" className={styles.login__submit}>
+            Log In
           </button>
-          <button type="button">
-            <GithubIcon size={16} /> GitHub
+        </form>
+        <p className={styles.login__divider}>or</p>
+        <div className={styles.login__buttons}>
+          <button type="button" className={styles.login__google}>
+            <GoogleIcon size={16} color="#fff" /> Google
+          </button>
+          <button type="button" className={styles.login__github}>
+            <GithubIcon size={16} color="#fff" /> GitHub
           </button>
         </div>
         <p>
-          Don&apos;t have an account? <Link href="/signup">Sign up</Link>
+          Don&apos;t have an account?{" "}
+          <Link href="/signup" className="link link-primary">
+            Sign up
+          </Link>
         </p>
       </div>
     </Layout>
