@@ -1,4 +1,5 @@
 @import "../styles/variables";
+@import "./mixins";
 
 .footer_container {
   background: $color-primary;
@@ -6,13 +7,10 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 79px;
+  height: 80px;
 }
 .footer_copy {
-  font-family: $fontSecondary;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
+  @include BodyTextBoldMobile; 
   line-height: 120%;
   text-align: center;
   color: $color-white;
@@ -20,13 +18,10 @@
   height: 22px;
   left: 4.17%;
   right: 4.17%;
-  top: 8px;
+  top: 20px;
 }
 .footer_terms {
-  font-family: $fontSecondary;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
+  @include BodyTextMobile;
   line-height: 120%;
   text-align: center;
   color: rgba(255, 255, 255, 0.7);

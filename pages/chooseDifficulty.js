@@ -7,7 +7,7 @@ export default function chooseDifficulty() {
     <div className={styles.ChooseDifficulty}>
       <div className={styles.ChooseDifficulty__text}>
         <h2>Choose difficulty</h2>
-        <p>Paragraph's summary</p>
+        <p>Select the level you would like to start with.</p>
       </div>
       <div className={styles.ChooseDifficulty__CardContainer}>
         <CardDifficulty difficulty="Junior" />

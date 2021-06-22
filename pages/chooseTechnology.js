@@ -6,8 +6,8 @@ export default function choseTechnology() {
   return (
     <div className={styles.ChooseTechnology}>
       <div className={styles.ChooseTechnology__text}>
-        <h2>Choose technology</h2>
-        <p>Paragraph's summary</p>
+        <h2>Choose a technology</h2>
+        <p>Practice your skills with a set of questions to improve your level.</p>
       </div>
       <CardTechnology
         technologyName="JavaScript"
