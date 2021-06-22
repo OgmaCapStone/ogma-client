@@ -10,8 +10,16 @@ export const getUser = async (username) => {
   return res;
 };
 
+export const getUserByEmail = async (email) => {
+  const res = await axios
+    .get(`${process.env.ENDPOINT_URL}/user?email=${email}`)
+    .then((res) => res.data);
+
+  return res;
+};
+
 export const getUsers = async () => {
-  const res = axios
+  const res = await axios
     .get(`${process.env.ENDPOINT_URL}/users/`)
     .then((res) => res.data);
 
@@ -19,8 +27,8 @@ export const getUsers = async () => {
 };
 
 export const createUser = async (data) => {
-  const res = axios
-    .post(`${ENDPOINT_URL}/users/create`, data)
+  const res = await axios
+    .post(`${ENDPOINT_URL}/users/create/`, data)
     .then((res) => res.data);
 
   return res;
