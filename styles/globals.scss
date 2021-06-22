@@ -1,11 +1,14 @@
+@import "./_mixins.scss";
 @import "./_variables.scss";
 
 html,
 body {
+  @include BodyTextMobile;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  @media (min-width: $breakpoint-md) {
+    @include BodyTextDesktop;
+  }
 }
 
 a {
@@ -26,6 +29,13 @@ body {
   &.container {
     padding-top: 4.7rem;
     padding-bottom: 4.7rem;
+  }
+}
+
+a {
+  color: $color-link;
+  &:hover {
+    opacity: 0.7;
   }
 }
 
