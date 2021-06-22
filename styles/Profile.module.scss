@@ -1,0 +1,125 @@
+@import "../styles/mixins";
+@import "../styles/variables";
+
+.main_container {
+  background: linear-gradient(119.62deg, #eaf0f1 9.06%, #dcf4f8 79.38%);
+  height: 576px;
+  left: 0px;
+  position: absolute;
+  top: 49px;
+  width: 360px;
+}
+
+.profile_container {
+  height: 288px;
+}
+
+.profile_header {
+  background: linear-gradient(
+      0deg,
+      rgba(40, 96, 100, 0.8),
+      rgba(40, 96, 100, 0.8)
+    ),
+    url(/public/images/double-bubble.png);
+  height: 115px;
+  left: calc(50% - 360px / 2);
+  position: absolute;
+  top: 0px;
+  width: 360px;
+}
+
+#profile_pic {
+  background: $color-secondary;
+  border-radius: 50%;
+  border: 0px solid $color-white;
+  bottom: 50px;
+  box-shadow: $shadow-large-drop;
+  display: block;
+  height: 110px;
+  left: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 60px;
+  width: 110px;
+}
+
+.profile_content {
+  display: grid;
+  height: 173px;
+  grid-template-rows: 43px 43px 43px 43px;
+  grid-template-columns: 100%;
+  position: relative;
+  top: 4px;
+}
+
+.profile_name {
+  grid-row: 2/3;
+  h1 {
+    color: #000000;
+    font-family: $fontTitle;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120%;
+    margin: 18px 0 0 0;
+    text-align: center;
+  }
+}
+
+.profile_sub {
+  grid-row: 3/4;
+  span {
+    color: rgba(0, 0, 0, 0.5);
+    font-family: $fontSecondary;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+  }
+  #level {
+    position: absolute;
+    height: 19px;
+    left: 129px;
+    top: 86px;
+  }
+  #techs {
+    position: absolute;
+    width: 138px;
+    height: 19px;
+    left: 110px;
+    bottom: 48px;
+  }
+}
+
+.profile_btn {
+  grid-row: 4/5;
+  .start_btn {
+    @include ButtonTextMobile;
+    background: $color-primary;
+    border: none;
+    border-radius: $border-radius-size;
+    box-shadow: 0px 14px 23px rgba(28, 37, 44, 0.08);
+    color: $color-white;
+    font-size: 21px;
+    height: 38px;
+    left: 94px;
+    position: absolute;
+    width: 168px;
+    margin: 3px 0 0 0px;
+  }
+}
+
+.skills_container {
+  height: 288px;
+  h1 {
+    color: #000000;
+    font-family: $fontTitle;
+    font-weight: bold;
+    font-size: 20px;
+    left: 15px;
+    line-height: 120%;
+    margin: 12px 0 0 0;
+    position: absolute;
+  }
+}
