@@ -40,52 +40,52 @@ export default function signup() {
         <h1 className={styles.login__h1}>Sign up</h1>
         <form onSubmit={handleSubmit}>
           <div className={styles.login__group}>
-            <label htmlFor="username">
-              Username
-              <input
-                name="username"
-                type="text"
-                value={state.username}
-                onChange={(e) => dispatch({ type: "change", e })}
-                required
-              />
-            </label>
+            <label htmlFor="username">Username</label>
+            <input
+              className={styles.login__input}
+              id="username"
+              name="username"
+              type="text"
+              value={state.username}
+              onChange={(e) => dispatch({ type: "change", e })}
+              required
+            />
           </div>
           <div className={styles.login__group}>
-            <label htmlFor="email">
-              Email
-              <input
-                name="email"
-                type="email"
-                value={state.email}
-                onChange={(e) => dispatch({ type: "change", e })}
-                required
-              />
-            </label>
+            <label htmlFor="email">Email</label>
+            <input
+              className={styles.login__input}
+              id="email"
+              name="email"
+              type="email"
+              value={state.email}
+              onChange={(e) => dispatch({ type: "change", e })}
+              required
+            />
           </div>
           <div className={styles.login__group}>
-            <label htmlFor="name">
-              Name
-              <input
-                name="name"
-                type="text"
-                value={state.name}
-                onChange={(e) => dispatch({ type: "change", e })}
-                required
-              />
-            </label>
+            <label htmlFor="name">Name</label>
+            <input
+              className={styles.login__input}
+              id="name"
+              name="name"
+              type="text"
+              value={state.name}
+              onChange={(e) => dispatch({ type: "change", e })}
+              required
+            />
           </div>
           <div className={styles.login__group}>
-            <label htmlFor="password">
-              Password
-              <input
-                name="password"
-                type="password"
-                value={state.password}
-                onChange={(e) => dispatch({ type: "change", e })}
-                required
-              />
-            </label>
+            <label htmlFor="password">Password</label>
+            <input
+              className={styles.login__input}
+              id="password"
+              name="password"
+              type="password"
+              value={state.password}
+              onChange={(e) => dispatch({ type: "change", e })}
+              required
+            />
           </div>
           <button type="submit" className={styles.login__submit}>
             Sign Up
@@ -98,14 +98,14 @@ export default function signup() {
             className={styles.login__google}
             onClick={() => signIn("google", { callbackUrl: "/profile" })}
           >
-            <GoogleIcon size={16} color="#fff" /> Google
+            <GoogleIcon size={18} color="#fff" /> Google
           </button>
           <button
             type="button"
             className={styles.login__github}
             onClick={() => signIn("github", { callbackUrl: "/profile" })}
           >
-            <GithubIcon size={16} color="#fff" /> GitHub
+            <GithubIcon size={18} color="#fff" /> GitHub
           </button>
         </div>
         <p className={styles.login__signup}>

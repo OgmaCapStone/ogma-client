@@ -28,28 +28,28 @@ export default function login() {
         <h1 className={styles.login__h1}>Log In</h1>
         <form onSubmit={handleSubmit}>
           <div className={styles.login__group}>
-            <label htmlFor="email">
-              Username
-              <input
-                name="email"
-                type="text"
-                value={state.email}
-                onChange={(e) => dispatch({ type: "change", e })}
-                required
-              />
-            </label>
+            <label htmlFor="email">Username</label>
+            <input
+              id="email"
+              className={styles.login__input}
+              name="email"
+              type="text"
+              value={state.email}
+              onChange={(e) => dispatch({ type: "change", e })}
+              required
+            />
           </div>
           <div className={styles.login__group}>
-            <label htmlFor="password">
-              Password
-              <input
-                name="password"
-                type="password"
-                value={state.password}
-                onChange={(e) => dispatch({ type: "change", e })}
-                required
-              />
-            </label>
+            <label htmlFor="password">Password</label>
+            <input
+              id="password"
+              className={styles.login__input}
+              name="password"
+              type="password"
+              value={state.password}
+              onChange={(e) => dispatch({ type: "change", e })}
+              required
+            />
           </div>
           <button type="submit" className={styles.login__submit}>
             Log In
@@ -62,14 +62,14 @@ export default function login() {
             className={styles.login__google}
             onClick={() => signIn("google", { callbackUrl: "/profile" })}
           >
-            <GoogleIcon size={16} color="#fff" /> Google
+            <GoogleIcon size={18} color="#fff" /> Google
           </button>
           <button
             type="button"
             className={styles.login__github}
             onClick={() => signIn("github", { callbackUrl: "/profile" })}
           >
-            <GithubIcon size={16} color="#fff" /> GitHub
+            <GithubIcon size={18} color="#fff" /> GitHub
           </button>
         </div>
         <p className={styles.login__signup}>
