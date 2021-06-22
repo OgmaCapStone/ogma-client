@@ -1,0 +1,37 @@
+@import "./_mixins.scss";
+@import "./_variables.scss";
+
+.cardDifficulty {
+  background-color: $color-white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  width: 245px;
+  max-width: 300px;
+  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  &__line {
+    text-align: left;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 5px;
+      background: $horizontal-junior-gradient;
+      width: 35px;
+      border-radius: 3px;
+    }
+  }
+  &__circle {
+    height: 25px;
+    width: 25px;
+    background: $vertical-junior-gradient;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  &__text {
+    @include headline3Mobile;
+  }
+}

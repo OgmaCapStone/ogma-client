@@ -56,3 +56,29 @@ $breakpoint-sm: 375px;
 $breakpoint-md: 414px;
 $breakpoint-lg: 768px;
 $breakpoint-xl: 1200px;
+
+//Gradients
+$vertical-junior-gradient: linear-gradient(180deg, #00292b 0%, #64dce0 134.38%);
+$horizontal-junior-gradient: linear-gradient(
+  90deg,
+  #00292b 0%,
+  #64dce0 134.38%
+);
+$vertical-mid-gradient: linear-gradient(180deg, #64dce0 0%, #193b3d 134.38%);
+$horizontal-mid-gradient: linear-gradient(90deg, #00292b 0%, #64dce0 134.38%);
+$vertical-senior-gradient: linear-gradient(180deg, #193b3d 0%, #474949 134.38%);
+$horizontal-senior-gradient: linear-gradient(
+  90deg,
+  #193b3d 0%,
+  #474949 134.38%
+);
+$vertical-legendary-gradient: linear-gradient(
+  180deg,
+  #474949 0%,
+  #6da8aa 134.38%
+);
+$horizontal-legendary-gradient: linear-gradient(
+  90deg,
+  #474949 0%,
+  #6da8aa 134.38%
+);
