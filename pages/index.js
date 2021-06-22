@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
@@ -37,16 +36,5 @@ export default function Home() {
         </div>
       </main>
     </Layout>
-=======
-import Navbar from "@components/Navbar"
-import Footer from "@components/Footer"
-import Profile from "@components/Profile"
-
-export default function Home() {
-  return (
-    <div>
-      <Profile/>x
-    </div>
->>>>>>> 461b34c67056e67ec0c7097ff4c18df5ca2f54f0
   )
 }
