@@ -1,0 +1,12 @@
+@import "./_mixins.scss";
+@import "./_variables.scss";
+
+.ChooseTechnology {
+  &__text {
+    padding-left: 15px;
+    p {
+      margin-top: -15px;
+      margin-bottom: 20px;
+    }
+  }
+}

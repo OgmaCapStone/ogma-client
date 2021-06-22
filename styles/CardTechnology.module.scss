@@ -1,0 +1,68 @@
+@import "./_mixins.scss";
+@import "./_variables.scss";
+
+.cardTechnology {
+  &__content {
+    position: relative;
+    animation: animatop 0.9s cubic-bezier(0.425, 1.14, 0.47, 1.125) forwards;
+  }
+
+  &__card {
+    width: 80%;
+    min-width: 340px;
+    max-width: 500px;
+    max-height: 110px;
+    border-radius: 20px;
+    background-color: $color-white;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    img {
+      border-radius: 0 20px 20px 0;
+      margin-left: auto;
+      object-fit: cover;
+      width: auto;
+      max-height: 110px;
+    }
+    &__profileinfo {
+      padding: 0px 20px;
+      max-height: 110px;
+      h1 {
+        @include headline3Mobile;
+      }
+      p {
+        @include BodyTextMobile;
+      }
+    }
+  }
+
+  // .cardTechnology {
+  //   width: 90%;
+  //   max-height: 120px;
+  //   max-width: 330px;
+  //   border-radius: 20px;
+  //   display: flex;
+  //   position: relative;
+  //   margin: 0 auto;
+  //   margin-top: 300px;
+  //   background-color: $color-white;
+  //   &__image {
+  //     width: auto;
+  //     object-fit: contain;
+  //     // align-self: fle;
+  //     border-radius: 0 20px 20px 0;
+  //   }
+  //   &__text {
+  //     flex: 1 1 auto;
+  //     padding-right: 30px;
+  //     padding-left: 20px;
+  //   }
+}
