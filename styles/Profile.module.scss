@@ -1,0 +1,115 @@
+@import "../styles/mixins";
+@import "../styles/variables";
+
+.profile_container {
+  height: 288px;
+}
+
+.profile_header {
+  background: linear-gradient(
+      0deg,
+      rgba(40, 96, 100, 0.8),
+      rgba(40, 96, 100, 0.8)
+    ),
+    url(/public/images/double-bubble.png);
+  height: 115px;
+  position: absolute;
+  top:4.7rem;
+  left: 0;
+  width: 100%
+}
+
+#profile_pic {
+  background: $color-secondary;
+  border-radius: 50%;
+  border: 0px solid $color-white;
+  bottom: 50px;
+  box-shadow: $shadow-large-drop;
+  display: block;
+  height: 110px;
+  left: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 20%;
+  width: 110px;
+}
+
+.profile_content {
+  display: grid;
+  height: 173px;
+  grid-template-rows: 43px 43px 43px 43px;
+  grid-template-columns: 100%;
+  position: relative;
+  top: 4px;
+}
+
+.profile_name {
+  grid-row: 2/3;
+  h1 {
+    color: #000000;
+    font-family: $fontTitle;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120%;
+    margin: 18px 0 0 0;
+    text-align: center;
+  }
+}
+
+.profile_sub {
+  grid-row: 3/4;
+  span {
+    color: rgba(0, 0, 0, 0.5);
+    font-family: $fontSecondary;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+  }
+  #level {
+    position: absolute;
+    height: 19px;
+    margin: 0 32%;
+    top: 86px;
+  }
+  #techs {
+    position: absolute;
+    width: 138px;
+    height: 19px;
+    margin: 0 26%;
+    bottom: 48px;
+  }
+}
+
+.profile_btn {
+  grid-row: 4/5;
+  .start_btn {
+    @include ButtonTextMobile;
+    background: $color-primary;
+    border: none;
+    border-radius: $border-radius-size;
+    box-shadow: 0px 14px 23px rgba(28, 37, 44, 0.08);
+    color: $color-white;
+    font-size: 21px;
+    height: 38px;
+    position: absolute;
+    width: 168px;
+    margin: 3px 20% 0px;
+  }
+}
+
+.skills_container {
+  height: 288px;
+  h1 {
+    color: #000000;
+    font-family: $fontTitle;
+    font-weight: bold;
+    font-size: 20px;
+    left: 15px;
+    line-height: 120%;
+    margin: 12px 0 0 0;
+    position: absolute;
+  }
+}
