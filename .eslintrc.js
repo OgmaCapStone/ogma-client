@@ -31,5 +31,6 @@ module.exports = {
     "react/no-array-index-key": ["off"],
     "no-param-reassign": ["error", { props: false }],
     "no-case-declarations": ["off"],
+    "jsx-a11y/label-has-associated-control": ["off"],
   },
 };
