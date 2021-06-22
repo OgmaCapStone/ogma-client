@@ -1,4 +1,5 @@
 @import "./_mixins.scss";
+@import "./_variables.scss";
 
 .login {
   &__container {
@@ -20,6 +21,12 @@
     box-sizing: border-box;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    @media (max-width: $breakpoint-sm) {
+      position: relative;
+      padding: 2rem 0;
+      width: 100%;
+      background: none;
+    }
   }
 
   &__h1 {
@@ -60,6 +67,9 @@
       height: 20px;
       background-color: #f2f9fa;
       z-index: -1;
+      @media (max-width: $breakpoint-sm) {
+        background-color: #e4f2f4;
+      }
     }
     &::after {
       content: "";
@@ -88,5 +98,9 @@
   &__github {
     background-color: #333333;
     color: #fff;
+  }
+
+  &__signup {
+    text-align: center;
   }
 }

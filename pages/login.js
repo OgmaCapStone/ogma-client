@@ -19,7 +19,7 @@ export default function login() {
         <form onSubmit={handleSubmit}>
           <div className={styles.login__group}>
             <label htmlFor="email">
-              Email
+              Username or email
               <input
                 name="email"
                 type="email"
@@ -52,7 +52,7 @@ export default function login() {
             <GithubIcon size={16} color="#fff" /> GitHub
           </button>
         </div>
-        <p>
+        <p className={styles.login__signup}>
           Don&apos;t have an account?{" "}
           <Link href="/signup" className="link link-primary">
             Sign up
