@@ -25,9 +25,11 @@ export default function Home() {
         <div className={styles.landing__heroInfo}>
           <h1 className={styles.landing__title}>Welcome to</h1>
           <OgmaLogoIcon size={60} color="#6da8aa" />
-          <p className={styles.landing__text}>Practice a tech language for free!</p>
+          <p className={styles.landing__text}>
+            Practice a tech language for free!
+          </p>
           <button type="button" className={styles.landing__primaryBtn}>
-            <Link href="/signin">Create account</Link>
+            <Link href="/signup">Create account</Link>
           </button>
           <button type="button" className={styles.landing__primaryBtn}>
             <Link href="/login">Log in</Link>
