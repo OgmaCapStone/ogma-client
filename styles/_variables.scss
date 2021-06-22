@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Spartan:wght@500;700&display=swap");
+
 // Colors
 $color-light-primary: #e4ebec;
 $color-dark-charcoal: #2f2a32;
 $color-charcoal-light: #403845;
 $color-primary: #286064;
+$color-link: #642c28;
 $color-secondary: #6da8aa;
 $color-charcoal: #37313c;
 $color-text-grey: #605866;
@@ -27,21 +30,21 @@ $border-radius-size: 30px;
 $base: 0.4rem;
 
 // Size Destktop
-$sizeHeadline1Destktop: $base * 13.75;
-$sizeHeadline2Destktop: $base * 10;
-$sizeHeadline3Desktop: $base * 7.5;
-$sizeHeadline4Desktop: $base * 5.25;
-$sizeButtonTextDesktop: $base * 5.25;
-$sizeBodyDestktop: $base * 4.5;
+$sizeHeadline1Desktop: $base * 8.6;
+$sizeHeadline2Desktop: $base * 6.25;
+$sizeHeadline3Desktop: $base * 4.7;
+$sizeHeadline4Desktop: $base * 3.3;
+$sizeButtonTextDesktop: $base * 3.3;
+$sizeBodyDesktop: $base * 2.8;
 $sizeLogoDesktop: $base * 15;
 
 //Mobile
-$sizeHeadline1Mobile: $base * 9;
-$sizeHeadline2Mobile: $base * 6.5;
-$sizeHeadline3Mobile: $base * 5;
-$sizeHeadline4Mobile: $base * 4.5;
-$sizeButtonTextMobile: $base * 4.5;
-$sizeBodyMobile: $base * 4;
+$sizeHeadline1Mobile: $base * 5.62;
+$sizeHeadline2Mobile: $base * 4.06;
+$sizeHeadline3Mobile: $base * 2.81;
+$sizeHeadline4Mobile: $base * 2.81;
+$sizeButtonTextMobile: $base * 2.81;
+$sizeBodyMobile: $base * 2.5;
 $sizeLogoMobile: $base * 6;
 
 // Font Family
@@ -49,7 +52,7 @@ $fontTitle: "Spartan", sans-serif;
 $fontSecondary: "Nunito Sans", sans-serif;
 
 // Breakpoints
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
+$breakpoint-sm: 375px;
+$breakpoint-md: 414px;
+$breakpoint-lg: 768px;
 $breakpoint-xl: 1200px;

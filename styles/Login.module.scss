@@ -1,12 +1,15 @@
+@import "./_mixins.scss";
+@import "./_variables.scss";
+
 .login {
   &__container {
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     right: 0;
     margin: auto;
-    padding: 2rem;
+    padding: 3rem;
     width: fit-content;
     height: fit-content;
     background: radial-gradient(
@@ -18,6 +21,86 @@
     box-sizing: border-box;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    @media (max-width: $breakpoint-sm) {
+      position: relative;
+      padding: 2rem 0;
+      width: 100%;
+      background: none;
+    }
+  }
+
+  &__h1 {
+    @include subTittleMobile;
+    margin: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    @media (min-width: $breakpoint-md) {
+      @include subTittleDesktop;
+    }
+  }
+
+  &__group {
+    margin-bottom: 1rem;
+    label {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+  }
+
+  &__divider {
+    position: relative;
+    text-align: center;
     z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 30px;
+      height: 20px;
+      background-color: #f2f9fa;
+      z-index: -1;
+      @media (max-width: $breakpoint-sm) {
+        background-color: #e4f2f4;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+      z-index: -2;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__google {
+    background-color: #4285f4;
+    color: #fff;
+  }
+
+  &__github {
+    background-color: #333333;
+    color: #fff;
+  }
+
+  &__signup {
+    text-align: center;
   }
 }
