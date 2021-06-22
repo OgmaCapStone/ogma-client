@@ -3,11 +3,11 @@
 
 html,
 body {
-  @include BodyTextMobile;
+  @include BodyTextDesktop;
   padding: 0;
   margin: 0;
-  @media (min-width: $breakpoint-md) {
-    @include BodyTextDesktop;
+  @media (max-width: $breakpoint-md) {
+    @include BodyTextMobile;
   }
 }
 

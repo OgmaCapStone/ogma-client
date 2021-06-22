@@ -2,38 +2,74 @@ import React, { useReducer } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { signIn } from "next-auth/client";
-import { initialState, reducer } from "@reducers/login";
-import { GithubIcon, GoogleIcon } from "@icons";
+import { initialState, reducer } from "@reducers/signup";
 import Layout from "@components/Layout";
+import { GoogleIcon, GithubIcon } from "@icons";
 import styles from "@styles/Login.module.scss";
+import { createUser } from "@database/users";
 
-export default function login() {
+export default function signup() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const router = useRouter();
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
-    signIn("credentials", {
-      username: state.email,
+    await createUser({
+      name: state.name,
+      email: state.email,
       password: state.password,
-      callbackUrl: "/",
-      redirect: false,
-    }).then((res) => res.url && router.push("/profile"));
+      login_type: "credentials",
+      username: state.username,
+      badges: null,
+      prefered_technologies: null,
+      profile_pic: "",
+    }).then(() => {
+      signIn("credentials", {
+        username: state.email,
+        password: state.password,
+        callbackUrl: "/",
+        redirect: false,
+      }).then((res) => res.url && router.push("/profile"));
+    });
   }
 
   return (
     <Layout header footer>
       <div className={styles.login__container}>
-        <h1 className={styles.login__h1}>Log In</h1>
+        <h1 className={styles.login__h1}>Sign up</h1>
         <form onSubmit={handleSubmit}>
           <div className={styles.login__group}>
-            <label htmlFor="email">
+            <label htmlFor="username">
               Username
               <input
-                name="email"
+                name="username"
                 type="text"
+                value={state.username}
+                onChange={(e) => dispatch({ type: "change", e })}
+                required
+              />
+            </label>
+          </div>
+          <div className={styles.login__group}>
+            <label htmlFor="email">
+              Email
+              <input
+                name="email"
+                type="email"
                 value={state.email}
+                onChange={(e) => dispatch({ type: "change", e })}
+                required
+              />
+            </label>
+          </div>
+          <div className={styles.login__group}>
+            <label htmlFor="name">
+              Name
+              <input
+                name="name"
+                type="text"
+                value={state.name}
                 onChange={(e) => dispatch({ type: "change", e })}
                 required
               />
@@ -52,7 +88,7 @@ export default function login() {
             </label>
           </div>
           <button type="submit" className={styles.login__submit}>
-            Log In
+            Sign Up
           </button>
         </form>
         <p className={styles.login__divider}>or</p>
@@ -73,9 +109,9 @@ export default function login() {
           </button>
         </div>
         <p className={styles.login__signup}>
-          Don&apos;t have an account?{" "}
-          <Link href="/signup" className="link link-primary">
-            Sign up
+          Already have an account?{" "}
+          <Link href="/login" className="link link-primary">
+            Log In
           </Link>
         </p>
       </div>
