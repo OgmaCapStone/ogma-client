@@ -41,14 +41,28 @@
 
   &__group {
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
     label {
-      display: flex;
-      flex-direction: column;
+      margin-left: 1.5rem;
+      margin-bottom: 0.5rem;
     }
   }
 
+  &__input {
+    @include InputActiveDesktop;
+  }
+
   &__submit {
+    @include ButtonTextDesktop;
+    @include ButtonPrimaryDesktop;
+    margin-bottom: 1rem;
     width: 100%;
+
+    @media (max-width: $breakpoint-md) {
+      @include ButtonTextMobile;
+      @include ButtonPrimaryMobile;
+    }
   }
 
   &__divider {
@@ -88,16 +102,33 @@
   &__buttons {
     display: flex;
     justify-content: space-between;
+    margin: 1rem 0;
   }
 
   &__google {
+    @include ButtonTextDesktop;
+    @include ButtonPrimaryDesktop;
+    margin-right: 1rem;
     background-color: #4285f4;
     color: #fff;
+    @media (max-width: $breakpoint-md) {
+      @include BodyTextBoldMobile;
+      @include ButtonPrimaryMobile;
+      margin-right: 0.5rem;
+      background-color: #4285f4;
+    }
   }
 
   &__github {
+    @include ButtonTextDesktop;
+    @include ButtonPrimaryDesktop;
     background-color: #333333;
     color: #fff;
+    @media (max-width: $breakpoint-md) {
+      @include BodyTextBoldMobile;
+      @include ButtonPrimaryMobile;
+      background-color: #333333;
+    }
   }
 
   &__signup {
