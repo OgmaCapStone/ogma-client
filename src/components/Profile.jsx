@@ -27,7 +27,6 @@ const Profile = () => {
       <section className={styles.skills_container}>
         <h1>Skills</h1>
       </section>
-    <TechnologyModal/>
     </Layout>
   )
 }
