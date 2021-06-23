@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '@components/Layout'
+import TechnologyModal from '@components/TechnologyModal'
 import styles from '@styles/Profile.module.scss'
 
 const Profile = () => {
@@ -26,6 +27,7 @@ const Profile = () => {
       <section className={styles.skills_container}>
         <h1>Skills</h1>
       </section>
+    <TechnologyModal/>
     </Layout>
   )
 }
