@@ -1,8 +1,7 @@
 import React from 'react'
-import { CloseCircleIcon } from '@icons'
 import styles from '@styles/TechModal.module.scss'
 
-const TechnologyModal = () => {
+const TechModal = () => {
   return (
     <section className={styles.modal_bg}>
       <section className={styles.modal}>
@@ -25,4 +24,4 @@ const TechnologyModal = () => {
   )
 }
 
-export default TechnologyModal
+export default TechModal
