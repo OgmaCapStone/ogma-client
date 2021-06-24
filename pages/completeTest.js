@@ -25,7 +25,7 @@ export default function Home() {
           <h2 className={styles.results__title}>
             You can move to the next level!
           </h2>
-          <Image width={800} height={800} src="/images/completeDesktop.png" alt="Complete test image" />
+          <Image width={600} height={600} src="/images/completeDesktop.png" alt="Complete test image" />
           <button type="button" className={styles.results__primaryBtn}>
             <Link href="/profile">Continue</Link>
           </button>
