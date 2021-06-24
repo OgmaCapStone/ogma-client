@@ -13,7 +13,11 @@ const Navbar = () => {
           <OgmaLogoIcon size={40} color="#FFF" />
         </section>
         {!loading && session && (
-          <button type="button" onClick={signOut}>
+          <button
+            className={styles.navbar_logout}
+            type="button"
+            onClick={signOut}
+          >
             Log Out
           </button>
         )}

@@ -14,9 +14,9 @@
     url(/public/images/double-bubble.png);
   height: 115px;
   position: absolute;
-  top:4.7rem;
+  top: 4.7rem;
   left: 0;
-  width: 100%
+  width: 100%;
 }
 
 #profile_pic {
@@ -69,21 +69,18 @@
     text-align: center;
   }
   #level {
-    position: absolute;
-    height: 19px;
-    margin: 0 32%;
-    top: 86px;
+    display: block;
+    top: 84px;
+    left: 20px;
   }
   #techs {
-    position: absolute;
-    width: 138px;
-    height: 19px;
-    margin: 0 26%;
-    bottom: 48px;
+    display: block;
   }
 }
 
 .profile_btn {
+  display: flex;
+  justify-content: center;
   grid-row: 4/5;
   .start_btn {
     @include ButtonTextMobile;
@@ -94,9 +91,7 @@
     color: $color-white;
     font-size: 21px;
     height: 38px;
-    position: absolute;
     width: 168px;
-    margin: 3px 20% 0px;
   }
 }
 

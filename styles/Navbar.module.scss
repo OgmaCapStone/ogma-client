@@ -1,4 +1,5 @@
 @import "../styles/variables";
+@import "./_mixins.scss";
 
 .header {
   background: $color-primary;
@@ -16,6 +17,16 @@
   align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
+
+  &_logout {
+    @include ButtonTextDesktop;
+    @include ButtonSecondaryDesktop;
+
+    @media (max-width: $breakpoint-md) {
+      @include ButtonTextMobile;
+      @include ButtonSecondaryMobile;
+    }
+  }
 }
 
 .navbar_brand {
