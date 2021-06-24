@@ -15,7 +15,6 @@ export default function Home() {
           name="description"
           content="Web app to practice for yout next job interview"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.landing__main}>

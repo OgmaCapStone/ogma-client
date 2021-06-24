@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '@components/Layout'
-import TechnologyModal from '@components/TechnologyModal'
 import styles from '@styles/Profile.module.scss'
 
 const Profile = () => {
@@ -22,6 +21,7 @@ const Profile = () => {
           <section className={styles.profile_btn}>
             <button className={styles.start_btn}>Start now</button>
           </section>
+          
         </section>
       </section>
       <section className={styles.skills_container}>

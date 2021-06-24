@@ -1,0 +1,47 @@
+@import "./variables";
+@import "./mixins";
+
+.results {
+    &__main {
+    display: flex;
+    flex-direction: column;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title {
+        @include subTittleMobile;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 768px;
+    }
+    &__primaryBtn {
+        @include ButtonPrimaryMobile;
+        margin-top: 20px;
+        a {
+            color: $color-white;
+        }
+    }
+    &__secondaryBtn {
+        @include ButtonSecondaryMobile;
+        margin-top: 20px;
+        a {
+            color: $color-primary;
+        }
+
+    }
+}
+
+@media screen and (min-width: $breakpoint-lg){
+    .results{
+        &__title {
+            @include subTittleDesktop;
+        }
+        &__primaryBtn {
+            @include ButtonPrimaryDesktop;
+        }
+    }
+}
