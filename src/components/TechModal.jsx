@@ -1,8 +1,7 @@
 import React from 'react'
 import styles from '@styles/TechModal.module.scss'
 
-const TechModal = () => {
-  return (
+const TechModal = () =>(
     <section className={styles.modal_bg}>
       <section className={styles.modal}>
         <section className={styles.modal_container}>
@@ -22,6 +21,5 @@ const TechModal = () => {
       </section>
     </section>
   )
-}
 
 export default TechModal
