@@ -1,0 +1,25 @@
+@import "./_mixins.scss";
+@import "./_variables.scss";
+
+.ProgressBar {
+  height: 12px;
+  width: 80%;
+  background-color: #e0e0de;
+  border-radius: 50px;
+  margin: 0 auto;
+  &__filler {
+    height: 100%;
+    background-color: $color-secondary;
+    border-radius: inherit;
+    color: transparent;
+  }
+  &__container {
+    margin-top: 10px;
+  }
+  &__label {
+    @include headline3Mobile;
+    color: $color-text-grey;
+    padding-left: 10px;
+    font-weight: 500;
+  }
+}

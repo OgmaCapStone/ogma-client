@@ -5,6 +5,7 @@
     &__main {
     display: flex;
     flex-direction: column;
+    margin-top: 25%;
     }
     &__heroImage {
         display: none;
@@ -13,7 +14,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 25%;
     }
     &__title {
         @include tittleMobile;
@@ -35,6 +35,9 @@
 
 @media screen and (min-width: $breakpoint-lg){
     .landing{
+        &__main {
+            margin-top: 25%;
+        }
         &__title {
             @include tittleDesktop;
         }
@@ -51,13 +54,14 @@
     .landing{
         &__main {
             flex-direction: row;
-            justify-content: center;
+            justify-content: space-around;
+            margin-top: 15%;
         }
         &__heroImage{
-            display: flex;
+            display: block;
         }
-        &___heroInfo {
-            margin-top: 0;
+        &__heroInfo {
+            margin-top: 20px;
         }
     }
 }

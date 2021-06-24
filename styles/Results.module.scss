@@ -43,5 +43,8 @@
         &__primaryBtn {
             @include ButtonPrimaryDesktop;
         }
+        &__secondaryBtn {
+            @include ButtonSecondaryDesktop; 
+        }
     }
 }

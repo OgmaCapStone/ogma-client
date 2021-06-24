@@ -1,5 +1,6 @@
 import React from "react";
 import CardDifficulty from "@components/CardDifficulty";
+import ProgressCircleBar from "@components/ProgressCircleBar";
 import styles from "@styles/ChooseDifficulty.module.scss";
 
 export default function chooseDifficulty() {
@@ -15,6 +16,7 @@ export default function chooseDifficulty() {
         <CardDifficulty difficulty="Senior" />
         <CardDifficulty difficulty="Legendary" />
       </div>
+      <ProgressCircleBar progress={10} />
     </div>
   );
 }

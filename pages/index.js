@@ -19,7 +19,7 @@ export default function Home() {
 
       <main className={styles.landing__main}>
         <div className={styles.landing__heroImage}>
-          <Image width={580} height={470} src="/public/images/heroImage.png" />
+          <Image width={580} height={470} src="/images/heroImage.png" />
         </div>
         <div className={styles.landing__heroInfo}>
           <h1 className={styles.landing__title}>Welcome to</h1>
