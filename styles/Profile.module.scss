@@ -30,6 +30,7 @@
   left: 0px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 8px;
   position: relative;
   top: 20%;
   width: 110px;
@@ -44,6 +45,13 @@
   top: 4px;
 }
 
+.edit_Profile_btn {
+  align-items: flex-end;
+  display: flex;
+  grid-row: 1/2;
+  justify-content: center;
+}
+
 .profile_name {
   grid-row: 2/3;
   h1 {
@@ -52,7 +60,7 @@
     font-weight: bold;
     font-size: 20px;
     line-height: 120%;
-    margin: 18px 0 0 0;
+    margin: 10px 0 0 0;
     text-align: center;
   }
 }
