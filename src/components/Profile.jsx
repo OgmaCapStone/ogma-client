@@ -26,7 +26,7 @@ const Profile = () => {
         </section>
         <img src="/images/Default.jpg" id={styles.profile_pic} alt="profile-img" />
         <section className={styles.profile_content}>
-          <section className={styles.edit_Profile_btn}>
+          <section className={styles.profile_edit}>
             <EditButton />
           </section>
           <section className={styles.profile_name}>
