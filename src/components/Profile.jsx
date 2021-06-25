@@ -3,6 +3,7 @@ import { useSession } from 'next-auth/client'
 import { getUserByEmail } from '@database/users';
 import Layout from '@components/Layout';
 import TechModal from '@components/TechModal'
+import EditButton from '@components/EditButton'
 import styles from '@styles/Profile.module.scss';
 
 const Profile = () => {
@@ -25,6 +26,9 @@ const Profile = () => {
         </section>
         <img src="/images/Default.jpg" id={styles.profile_pic} alt="profile-img" />
         <section className={styles.profile_content}>
+          <section className={styles.edit_Profile_btn}>
+            <EditButton />
+          </section>
           <section className={styles.profile_name}>
             <h1>{user.name}</h1>
           </section>

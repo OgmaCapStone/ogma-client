@@ -44,6 +44,13 @@
   top: 4px;
 }
 
+.edit_Profile_btn {
+  align-items: flex-end;
+  display: flex;
+  grid-row: 1/2;
+  justify-content: center;
+}
+
 .profile_name {
   grid-row: 2/3;
   h1 {
