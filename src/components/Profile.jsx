@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { useSession } from 'next-auth/client'
-import { getUserByEmail } from '@database/users'
-import Layout from '@components/Layout'
-import styles from '@styles/Profile.module.scss'
+import { getUserByEmail } from '@database/users';
+import Layout from '@components/Layout';
+import TechModal from '@components/TechModal'
+import styles from '@styles/Profile.module.scss';
 
 const Profile = () => {
   const [session, loading] = useSession()
   const [user, setUser] = useState([])
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     if (!loading && session) {
@@ -21,14 +23,14 @@ const Profile = () => {
         <section className={styles.profile_header}>
           {/* <img src="/images/double-bubble.png" alt="bg-pattern" id={styles.bg_pattern}/> */}
         </section>
-        <img src="/images/Crop Photo LinkedIn.jpeg" id={styles.profile_pic} alt="profile-img" />
+        <img src="/images/Default.jpg" id={styles.profile_pic} alt="profile-img" />
         <section className={styles.profile_content}>
           <section className={styles.profile_name}>
-            <h1>{user?.name}</h1>
+            <h1>{user.name}</h1>
           </section>
           <section className={styles.profile_sub}>
             <span id={styles.level}>Mid Developer</span>
-            <span id={styles.techs}>{user?.prefered_technologies?.map(tech => tech)}</span>
+            <span id={styles.techs}>Insert prefered technologies here!</span>
           </section>
           <section className={styles.profile_btn}>
             <button type="button" className={styles.start_btn}>Start now</button>
@@ -37,6 +39,8 @@ const Profile = () => {
       </section>
       <section className={styles.skills_container}>
         <h1>Skills</h1>
+        <button type="button" onClick={() => setShowModal(true)}>Open</button>
+        {showModal && <TechModal hideModal={setShowModal} />}
       </section>
     </Layout>
   )
