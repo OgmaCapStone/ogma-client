@@ -12,6 +12,7 @@
     background-color: $color-secondary;
     border-radius: inherit;
     color: transparent;
+    transition: width 1s ease-in-out;
   }
   &__container {
     margin-top: 10px;

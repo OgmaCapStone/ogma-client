@@ -10,7 +10,6 @@ const ProgressCircleBar = ({ progress }) => {
   const radius = size / 2 - strokeWidth / 2;
   const circumference = 2 * Math.PI * radius;
   useEffect(() => {
-    // const progressOffset = ((100 - progress) / 100) * circumference;
     const progressOffset = ((100 - progress) / 100) * circumference;
     setOffset(progressOffset);
     circleRef.current.style =
