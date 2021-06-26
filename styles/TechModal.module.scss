@@ -20,31 +20,32 @@
   display: grid;
   grid-template-rows: 50% 50%;
   grid-template-columns: 100%;
-  height: 530px;
-  max-height: 62%;
+  height: auto;
   max-width: 76%;
   width: 525px;
 }
 
 .close_btn {
+  align-self: flex-start;
   background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 25px;
-  padding: 17px 0px 0px 16px;
 }
 
 .modal_header {
-  grid-row: 1/2;
   background: url("/images/Unofficial_JS.png");
-  background-position: 0px 0px;
+  background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   border-radius: $border-radius-size $border-radius-size $border-radius-size 0px;
-  .modal_tech_btn {
-    display: flex;
-  }
+  display: flex;
+  height: 264px;
+  justify-content: space-between;
+  grid-row: 1/2;
+  padding: 20px;
   .tech_btn {
+    align-self: flex-end;
     background-color: $color-secondary;
     border: none;
     border-radius: 16px;
