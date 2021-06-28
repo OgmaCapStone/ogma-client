@@ -1,8 +1,9 @@
-import React from "react";
-import CardDifficulty from "@components/CardDifficulty";
+import React, { useState } from "react";
+import Options from "@components/SelectOptions";
 import styles from "@styles/ChooseDifficulty.module.scss";
 
 export default function chooseDifficulty() {
+  const [Difficulty, setDifficulty] = useState([]);
   return (
     <div className={styles.ChooseDifficulty}>
       <div className={styles.ChooseDifficulty__text}>
@@ -10,10 +11,30 @@ export default function chooseDifficulty() {
         <p>Select the level you would like to start with.</p>
       </div>
       <div className={styles.ChooseDifficulty__CardContainer}>
-        <CardDifficulty difficulty="Junior" />
-        <CardDifficulty difficulty="Mid" />
-        <CardDifficulty difficulty="Senior" />
-        <CardDifficulty difficulty="Legendary" />
+        <Options
+          onChange={(e) => {
+            setDifficulty(e.target.value);
+          }}
+          options={[
+            {
+              label: "Junior",
+              value: "junior",
+            },
+            {
+              label: "Mid",
+              value: "mid",
+            },
+            {
+              label: "Senior",
+              value: "senior",
+            },
+            {
+              label: "Legendary",
+              value: "legendary",
+            },
+          ]}
+          background="glass"
+        />
       </div>
     </div>
   );

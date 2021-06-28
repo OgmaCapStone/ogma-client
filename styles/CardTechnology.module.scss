@@ -4,14 +4,14 @@
 .cardTechnology {
   &__content {
     position: relative;
-    animation: animatop 0.9s cubic-bezier(0.425, 1.14, 0.47, 1.125) forwards;
+    // animation: animatop 0.9s cubic-bezier(0.425, 1.14, 0.47, 1.125) forwards;
   }
 
   &__card {
     width: 80%;
     min-width: 340px;
     max-width: 500px;
-    max-height: 110px;
+    height: auto;
     border-radius: 20px;
     background-color: $color-white;
     position: relative;
@@ -28,18 +28,22 @@
     img {
       border-radius: 0 20px 20px 0;
       margin-left: auto;
-      object-fit: cover;
-      width: auto;
+      object-fit: fill;
+      width: 100px;
       max-height: 110px;
     }
     &__profileinfo {
       padding: 0px 20px;
-      max-height: 110px;
-      h1 {
+      max-height: 140px;
+      width: 90%;
+      h3 {
         @include headline3Mobile;
+        padding-top: 20px;
+        padding-bottom: 10px;
       }
       p {
         @include BodyTextMobile;
+        padding-bottom: 20px;
       }
     }
   }
