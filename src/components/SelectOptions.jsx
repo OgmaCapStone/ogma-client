@@ -2,7 +2,6 @@ import React from "react";
 import styles from "@styles/selectOptions.module.scss";
 
 export default function selectOptions({
-  id,
   onChange,
   options,
   icon,
