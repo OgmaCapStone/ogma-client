@@ -8,7 +8,8 @@
       "@icons": ["src/icons/index"],
       "@components/*": ["src/components/*"],
       "@styles/*": ["styles/*"],
-      "@images/*": ["images/*"]
+      "@images/*": ["images/*"],
+      "@context": ["src/utils/context/store"]
     }
   }
 }
