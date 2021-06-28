@@ -1,0 +1,23 @@
+@import "./_mixins.scss";
+
+.questions {
+  &__header {
+    margin-bottom: 4rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__options {
+    margin-bottom: 1rem;
+  }
+
+  &__btn {
+    @include ButtonTextDesktop;
+    @include ButtonPrimaryDesktop;
+
+    width: 100%;
+  }
+}
