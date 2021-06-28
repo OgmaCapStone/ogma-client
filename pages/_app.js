@@ -1,4 +1,5 @@
 import React from "react";
+import { ContextProvider } from "@context";
 import { Provider as AuthProvider } from "next-auth/client";
 import "../styles/globals.scss";
 import "../styles/_reset.scss";
@@ -6,7 +7,9 @@ import "../styles/_reset.scss";
 function MyApp({ Component, pageProps }) {
   return (
     <AuthProvider session={pageProps.session}>
-      <Component {...pageProps} />
+      <ContextProvider>
+        <Component {...pageProps} />
+      </ContextProvider>
     </AuthProvider>
   );
 }
