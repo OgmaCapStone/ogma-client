@@ -19,13 +19,9 @@
   padding-bottom: 15px;
 
   &_logout {
-    @include ButtonTextDesktop;
-    @include ButtonSecondaryDesktop;
-
-    @media (max-width: $breakpoint-md) {
-      @include ButtonTextMobile;
-      @include ButtonSecondaryMobile;
-    }
+    @include ButtonTextMobile;
+    @include ButtonSecondaryMobile;
+    cursor: pointer;
   }
 }
 
