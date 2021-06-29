@@ -1,8 +1,9 @@
 import React from "react";
 import CardDifficulty from "@components/CardDifficulty";
+import withAuth from "@auth";
 import styles from "@styles/ChooseDifficulty.module.scss";
 
-export default function chooseDifficulty() {
+function chooseDifficulty() {
   return (
     <div className={styles.ChooseDifficulty}>
       <div className={styles.ChooseDifficulty__text}>
@@ -18,3 +19,5 @@ export default function chooseDifficulty() {
     </div>
   );
 }
+
+export default withAuth(chooseDifficulty, "root");

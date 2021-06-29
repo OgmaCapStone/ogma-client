@@ -5,10 +5,11 @@ import { signIn } from "next-auth/client";
 import { initialState, reducer } from "@reducers/signup";
 import Layout from "@components/Layout";
 import { GoogleIcon, GithubIcon } from "@icons";
-import styles from "@styles/Login.module.scss";
+import withAuth from "@auth";
 import { createUser } from "@database/users";
+import styles from "@styles/Login.module.scss";
 
-export default function signup() {
+function signup() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const router = useRouter();
 
@@ -118,3 +119,5 @@ export default function signup() {
     </Layout>
   );
 }
+
+export default withAuth(signup, "profile");

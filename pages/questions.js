@@ -4,9 +4,10 @@ import Layout from "@components/Layout";
 import ProgressBar from "@components/ProgressBar";
 import Options from "@components/SelectOptions";
 import { getQuestions } from "@database/questions";
+import withAuth from "@auth";
 import styles from "@styles/questions.module.scss";
 
-export default function questions() {
+function questions() {
   const { dispatch, state } = useContext(store);
   const [questions, setQuestions] = useState([]);
   const [activeQuestion, setActiveQuestion] = useState(0);
@@ -82,3 +83,5 @@ export default function questions() {
     </Layout>
   );
 }
+
+export default withAuth(questions, "root");
