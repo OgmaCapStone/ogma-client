@@ -54,6 +54,7 @@
   &__card {
     position: relative;
     display: flex;
+    align-items: center;
     margin-bottom: 1rem;
     padding: 1rem;
     width: 100%;
@@ -128,10 +129,15 @@
 
   &__label {
     @include BodyTextBoldDesktop;
-    margin-bottom: 0.5rem;
 
     &:first-letter {
       text-transform: uppercase;
     }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
   }
 }

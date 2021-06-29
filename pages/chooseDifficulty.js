@@ -5,6 +5,7 @@ import Layout from "@components/Layout";
 import { store } from "@context";
 import Options from "@components/SelectOptions";
 import withAuth from "@auth";
+import { DotListIcon } from "@icons";
 import styles from "@styles/ChooseDifficulty.module.scss";
 
 function chooseDifficulty() {
@@ -33,18 +34,22 @@ function chooseDifficulty() {
               {
                 label: "Junior",
                 value: "junior",
+                icon: <DotListIcon size={20} colors={["#00292B", "#64DCE0"]} />,
               },
               {
                 label: "Mid",
                 value: "mid",
+                icon: <DotListIcon size={20} colors={["#64DCE0", "#193B3D"]} />,
               },
               {
                 label: "Senior",
                 value: "senior",
+                icon: <DotListIcon size={20} colors={["#193B3D", "#474949"]} />,
               },
               {
                 label: "Legendary",
                 value: "legendary",
+                icon: <DotListIcon size={20} colors={["#474949", "#6DA8AA"]} />,
               },
             ]}
             background="glass"

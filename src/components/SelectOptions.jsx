@@ -4,7 +4,6 @@ import styles from "@styles/SelectOptions.module.scss";
 export default function selectOptions({
   onChange,
   options,
-  icon,
   background,
   className,
   cardStyles,
@@ -29,8 +28,10 @@ export default function selectOptions({
               styles.options__card
             } ${styles[`options__${cardStyles}`]}`}
           >
+            {item.icon && (
+              <div className={styles.options__icon}>{item.icon}</div>
+            )}
             <div className={styles.options__info}>
-              {icon}
               <p className={styles.options__label}>{item.label}</p>
               <p className={styles.options__subLabel}>{item.subLabel}</p>
               <p className={styles.options__text}>{item.text}</p>

@@ -3,7 +3,7 @@
 
 .ChooseDifficulty {
   &__text {
-    margin: 30px 0;
+    text-align: center;
     h2 {
       @include subTittleMobile;
     }
@@ -12,11 +12,6 @@
       @include BodyTextMobile;
       margin-bottom: 20px;
     }
-  }
-  &__CardContainer {
-    display: grid;
-    justify-content: center;
-    margin: 0 auto;
   }
   &__btn {
     @include ButtonTextMobile;
