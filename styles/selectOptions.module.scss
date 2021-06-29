@@ -45,6 +45,10 @@
 
   &__withImage {
     padding-right: 116px !important;
+
+    @media (max-width: $breakpoint-md) {
+      padding-right: 1rem !important;
+    }
   }
 
   &__card {

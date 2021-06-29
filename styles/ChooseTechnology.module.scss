@@ -3,19 +3,16 @@
 
 .ChooseTechnology {
   &__text {
-    margin: 30px 0;
+    text-align: center;
     h2 {
       @include subTittleMobile;
+      margin-bottom: 1rem;
     }
     padding-left: 15px;
     p {
       @include BodyTextMobile;
-      margin-bottom: 20px;
+      margin-bottom: 2rem;
     }
-  }
-  &__options {
-    width: 80%;
-    margin: 0 auto;
   }
   &__btn {
     @include ButtonTextMobile;
