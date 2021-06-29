@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import { store } from "@context";
 import Layout from "@components/Layout";
 import Head from "next/head";
@@ -10,14 +11,19 @@ import styles from "@styles/questions.module.scss";
 
 function questions() {
   const { dispatch, state } = useContext(store);
+  const router = useRouter();
   const [questions, setQuestions] = useState([]);
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [answer, setAnswer] = useState(null);
 
   useEffect(() => {
-    getQuestions(state.technology, state.level).then((res) =>
-      setQuestions(res.questions)
-    );
+    if (!state.technology && !state.level) {
+      router.replace("/chooseTechnology");
+    } else {
+      getQuestions(state.technology, state.level).then((res) =>
+        setQuestions(res.questions)
+      );
+    }
   }, []);
 
   function checkAnswer(e) {
@@ -42,13 +48,13 @@ function questions() {
   return (
     <Layout>
       <Head>
-      <title>Ogma App</title>
-      <meta
-        name="description"
-        content="Web app to practice for yout next job interview"
-      />
+        <title>Ogma App</title>
+        <meta
+          name="description"
+          content="Web app to practice for yout next job interview"
+        />
       </Head>
-      
+
       {questions.length !== 0 ? (
         <>
           <header className={styles.questions__header}>
