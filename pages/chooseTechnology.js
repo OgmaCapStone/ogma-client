@@ -23,7 +23,8 @@ function choseTechnology() {
         </p>
       </div>
       <Options
-        className={styles.ChooseTechnology__options}
+        className={`${styles.ChooseTechnology__options}`}
+        cardStyles="withImage"
         onChange={(e) => {
           dispatch({ type: "SET_TECHNOLOGY", technology: e.target.value });
         }}

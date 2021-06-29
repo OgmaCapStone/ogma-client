@@ -43,6 +43,10 @@
     }
   }
 
+  &__withImage {
+    padding-right: 116px !important;
+  }
+
   &__card {
     position: relative;
     display: flex;
@@ -62,6 +66,11 @@
     -ms-transition: box-shadow 0.3s ease-in-out;
     -o-transition: box-shadow 0.3s ease-in-out;
 
+    @media (max-width: $breakpoint-md) {
+      padding-right: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
     img {
       position: absolute;
       top: 0;
@@ -75,6 +84,20 @@
       -moz-border-radius: 0 20px 20px 0;
       -ms-border-radius: 0 20px 20px 0;
       -o-border-radius: 0 20px 20px 0;
+
+      @media (max-width: $breakpoint-md) {
+        top: -1rem;
+        right: -1rem;
+        width: 50px;
+        height: 50px;
+        border: 2px solid #fff;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        box-shadow: $shadow-large-drop;
+      }
     }
   }
 
@@ -101,5 +124,10 @@
 
   &__label {
     @include BodyTextBoldDesktop;
+    margin-bottom: 0.5rem;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
   }
 }
