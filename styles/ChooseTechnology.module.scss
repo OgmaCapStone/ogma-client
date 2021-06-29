@@ -17,4 +17,17 @@
     width: 80%;
     margin: 0 auto;
   }
+  &__btn {
+    @include ButtonTextMobile;
+    @include ButtonPrimaryMobile;
+    display: block !important;
+    margin: auto;
+    a {
+      color: $color-white;
+    }
+    @media (min-width: $breakpoint-md) {
+      @include ButtonTextDesktop;
+      @include ButtonPrimaryDesktop;
+    }
+  }
 }

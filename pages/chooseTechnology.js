@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { store } from "@context";
+import Link from "next/link";
 import Options from "@components/SelectOptions";
 import { getTechnologies } from "@database/technologies";
 import withAuth from "@auth";
 import styles from "@styles/ChooseTechnology.module.scss";
 
 function choseTechnology() {
+  const { dispatch } = useContext(store);
   const [technology, setTechnology] = useState([]);
-  const [selectedTechnology, setSelectedTechnology] = useState([]);
 
   useEffect(() => {
     getTechnologies().then((res) => setTechnology(res.response));
@@ -23,7 +25,7 @@ function choseTechnology() {
       <Options
         className={styles.ChooseTechnology__options}
         onChange={(e) => {
-          setSelectedTechnology(e.target.value);
+          dispatch({ type: "SET_TECHNOLOGY", technology: e.target.value });
         }}
         options={technology?.map((tech) => ({
           label: tech.name,
@@ -33,6 +35,9 @@ function choseTechnology() {
         }))}
         background="glass"
       />
+      <button type="button" className={styles.ChooseTechnology__btn}>
+        <Link href="chooseDifficulty">Choose difficulty</Link>
+      </button>
     </div>
   );
 }
