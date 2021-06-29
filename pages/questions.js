@@ -10,12 +10,32 @@ export default function questions() {
   const { dispatch, state } = useContext(store);
   const [questions, setQuestions] = useState([]);
   const [activeQuestion, setActiveQuestion] = useState(0);
+  const [answer, setAnswer] = useState(null);
 
   useEffect(() => {
     getQuestions(state.technology, state.level).then((res) =>
       setQuestions(res.questions)
     );
   }, []);
+
+  function checkAnswer(e) {
+    const { value } = e.target;
+    const correctAnswer =
+      questions[activeQuestion].answers[
+        questions[activeQuestion].correct_answer_index
+      ];
+
+    console.log(value, correctAnswer, value === correctAnswer);
+    setAnswer([value === correctAnswer, e.target]);
+  }
+
+  function nextQuestion() {
+    if (activeQuestion < questions.length - 1) {
+      setActiveQuestion((state) => state + 1);
+      dispatch({ type: "RATE_QUESTION", question: answer[0] });
+      answer[1].checked = false;
+    }
+  }
 
   return (
     <Layout>
@@ -38,6 +58,8 @@ export default function questions() {
           </div>
           <div className={styles.questions__options}>
             <Options
+              question={activeQuestion}
+              onChange={checkAnswer}
               options={questions[activeQuestion].answers.map((item) => ({
                 subLabel: item,
                 value: item,
@@ -45,7 +67,11 @@ export default function questions() {
             />
           </div>
           <div className={styles.questions__submit}>
-            <button className={styles.questions__btn} type="button">
+            <button
+              className={styles.questions__btn}
+              type="button"
+              onClick={nextQuestion}
+            >
               Check
             </button>
           </div>
