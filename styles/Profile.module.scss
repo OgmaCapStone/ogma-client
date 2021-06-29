@@ -99,7 +99,7 @@
     @include subTittleMobile;
   }
   .modal_btn {
-    @include ButtonDisableMobile;
+    display: none;
   }
 }
 
@@ -136,7 +136,7 @@
       @include subTittleDesktop;
     }
     .modal_btn {
-      @include ButtonDisableDesktop;
+      display: none;
     }
   }
 }

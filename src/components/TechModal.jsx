@@ -13,8 +13,8 @@ const TechModal = ({ hideModal }) =>
       <section className={styles.modal_body}>
         <section className={styles.tech_level_success}>Junior</section>
         <section className={styles.tech_level_success}>Mid</section>
-        <section className={styles.tech_level_unsuccess }>Senior</section>
-        <section className={styles.tech_level_unsuccess }>Legendary</section>
+        <section className={styles.tech_level_unsuccess}>Senior</section>
+        <section className={styles.tech_level_unsuccess}>Legendary</section>
       </section>
     </section>
   </section>
