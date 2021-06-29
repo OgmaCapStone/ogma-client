@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import Link from "next/link";
+import { store } from "@context";
 import Options from "@components/SelectOptions";
 import Toast from "@components/Toast";
 import withAuth from "@auth";
 import styles from "@styles/ChooseDifficulty.module.scss";
 
 function chooseDifficulty() {
-  const [difficulty, setDifficulty] = useState([]);
+  const { dispatch } = useContext(store);
   const testList = [
     {
       id: 1,
@@ -42,7 +44,7 @@ function chooseDifficulty() {
       <div className={styles.ChooseDifficulty__CardContainer}>
         <Options
           onChange={(e) => {
-            setDifficulty(e.target.value);
+            dispatch({ type: "SET_LEVEL", level: e.target.value });
           }}
           options={[
             {
@@ -65,6 +67,9 @@ function chooseDifficulty() {
           background="glass"
         />
       </div>
+      <button type="button" className={styles.ChooseDifficulty__btn}>
+        <Link href="/questions">Go to test</Link>
+      </button>
       <Toast toastList={testList} position="bottom-right" />
     </div>
   );
