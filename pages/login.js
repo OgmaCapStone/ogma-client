@@ -1,5 +1,6 @@
 import React, { useReducer } from "react";
 import Link from "next/link";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { signIn } from "next-auth/client";
 import { initialState, reducer } from "@reducers/login";
@@ -25,6 +26,13 @@ function login() {
 
   return (
     <Layout header footer>
+      <Head>
+      <title>Ogma App</title>
+      <meta
+        name="description"
+        content="Web app to practice for yout next job interview"
+      />
+      </Head>
       <div className={styles.login__container}>
         <h1 className={styles.login__h1}>Log In</h1>
         <form onSubmit={handleSubmit}>

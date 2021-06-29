@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { store } from "@context";
 import Layout from "@components/Layout";
+import Head from "next/head";
 import ProgressBar from "@components/ProgressBar";
 import Options from "@components/SelectOptions";
 import { getQuestions } from "@database/questions";
@@ -40,6 +41,13 @@ function questions() {
 
   return (
     <Layout>
+      <Head>
+      <title>Ogma App</title>
+      <meta
+        name="description"
+        content="Web app to practice for yout next job interview"
+      />
+      </Head>
       {questions.length !== 0 ? (
         <>
           <header className={styles.questions__header}>

@@ -55,10 +55,7 @@
 .profile_name {
   grid-row: 2/3;
   h1 {
-    color: #000000;
-    font-family: $fontTitle;
-    font-weight: bold;
-    font-size: 20px;
+    @include subTittleMobile;
     line-height: 120%;
     margin: 10px 0 0 0;
     text-align: center;
@@ -68,11 +65,8 @@
 .profile_sub {
   grid-row: 3/4;
   span {
-    color: rgba(0, 0, 0, 0.5);
-    font-family: $fontSecondary;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
+    @include BodyTextMobile;
+    color: $color-text-grey;
     line-height: 120%;
     text-align: center;
   }
@@ -91,9 +85,8 @@
   justify-content: center;
   grid-row: 4/5;
   .start_btn {
-    @include ButtonPrimaryDesktop;
+    @include ButtonPrimaryMobile;
     @include ButtonTextMobile;
-
     a {
       color: $color-white;
     }
@@ -103,13 +96,38 @@
 .skills_container {
   height: 288px;
   h1 {
-    color: #000000;
-    font-family: $fontTitle;
-    font-weight: bold;
-    font-size: 20px;
+    @include subTittleMobile;
     left: 15px;
     line-height: 120%;
     margin: 12px 0 0 0;
     position: absolute;
+  }
+}
+@media screen and (min-width: $breakpoint-lg){
+  .profile_content {
+    display: grid;
+    height: 173px;
+    grid-template-rows: 43px 60px 60px 60px;
+    grid-template-columns: 100%;
+    position: relative;
+    top: 4px;
+  }
+  .profile_name {
+    h1 {
+      @include subTittleDesktop;
+
+    }
+  }
+  .profile_sub {
+    span {
+      @include BodyTextDesktop;
+      line-height: 150%;
+    }
+  }
+  .profile_btn {
+    .start_btn {
+    @include ButtonPrimaryDesktop;
+    @include ButtonTextDesktop;
+    }
   }
 }

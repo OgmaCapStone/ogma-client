@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSession } from "next-auth/client";
 import { getUserByEmail } from "@database/users";
 import Link from "next/link";
+import Head from "next/head";
 import Layout from "@components/Layout";
 import TechModal from "@components/TechModal";
 import EditButton from "@components/EditButton";
@@ -20,6 +21,13 @@ const Profile = () => {
 
   return (
     <Layout header footer>
+      <Head>
+      <title>Ogma App</title>
+      <meta
+        name="description"
+        content="Web app to practice for yout next job interview"
+      />
+      </Head>
       <section className={styles.profile_container}>
         <section className={styles.profile_header} />
         <img
