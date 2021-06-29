@@ -9,7 +9,8 @@
       "@components/*": ["src/components/*"],
       "@styles/*": ["styles/*"],
       "@images/*": ["images/*"],
-      "@context": ["src/utils/context/store"]
+      "@context": ["src/utils/context/store"],
+      "@auth": ["src/utils/auth/withAuth"]
     }
   }
 }
