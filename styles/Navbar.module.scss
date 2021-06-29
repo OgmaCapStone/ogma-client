@@ -22,7 +22,7 @@
     @include ButtonTextDesktop;
     @include ButtonSecondaryDesktop;
 
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-lg) {
       @include ButtonTextMobile;
       @include ButtonSecondaryMobile;
     }
