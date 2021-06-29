@@ -11,3 +11,4 @@ export { default as CloseIcon } from "./closeIcon";
 export { default as CloseCircleIcon } from "./closeCircleIcon";
 export { default as CheckCircleIcon } from "./checkCircleIcon";
 export { default as WarningIcon } from "./warningIcon";
+export { default as ErrorIcon } from "./errorIcon";
