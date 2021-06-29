@@ -48,6 +48,7 @@ function questions() {
         content="Web app to practice for yout next job interview"
       />
       </Head>
+      
       {questions.length !== 0 ? (
         <>
           <header className={styles.questions__header}>

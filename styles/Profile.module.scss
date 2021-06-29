@@ -94,15 +94,20 @@
 }
 
 .skills_container {
-  height: 288px;
+  margin-top: 10%;
   h1 {
     @include subTittleMobile;
     left: 15px;
     line-height: 120%;
-    margin: 12px 0 0 0;
     position: absolute;
   }
+  button{
+    display: none;
+  }
 }
+
+
+
 @media screen and (min-width: $breakpoint-lg){
   .profile_content {
     display: grid;
@@ -128,6 +133,11 @@
     .start_btn {
     @include ButtonPrimaryDesktop;
     @include ButtonTextDesktop;
+    }
+  }
+  .skills_container {
+    h1 {
+      @include subTittleDesktop;
     }
   }
 }
