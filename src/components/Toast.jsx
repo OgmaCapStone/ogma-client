@@ -42,9 +42,11 @@ const Toast = ({ toastList, position, autoDelete, autoDeleteTime }) => {
             } `}
             style={{ backgroundColor: toast.backgroundColor }}
           >
-            <button onClick={() => deleteToast(toast.id)}>X</button>
+            <button onClick={() => deleteToast(toast.id)} type="button">
+              X
+            </button>
             <div className={styles.Toast__notification__image}>
-              <img src={toast.icon} alt="" />
+              {toast.icon}
             </div>
             <div>
               <p className={styles.Toast__notification__title}>{toast.title}</p>
