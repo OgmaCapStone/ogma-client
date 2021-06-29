@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
-import CardTechnology from "@components/CardTechnology";
 import Options from "@components/SelectOptions";
 import { getTechnologies } from "@database/technologies";
+import withAuth from "@auth";
 import styles from "@styles/ChooseTechnology.module.scss";
 
-export default function choseTechnology() {
-  const [technology, settechnology] = useState([]);
-  const [SelectedTechnology, setSelectedTechnology] = useState([]);
+function choseTechnology() {
+  const [technology, setTechnology] = useState([]);
+  const [selectedTechnology, setSelectedTechnology] = useState([]);
 
   useEffect(() => {
-    getTechnologies().then((res) => settechnology(res.response));
+    getTechnologies().then((res) => setTechnology(res.response));
   }, []);
+
   return (
     <div className={styles.ChooseTechnology}>
       <div className={styles.ChooseTechnology__text}>
@@ -35,3 +36,5 @@ export default function choseTechnology() {
     </div>
   );
 }
+
+export default withAuth(choseTechnology, "root");

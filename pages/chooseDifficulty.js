@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 import Options from "@components/SelectOptions";
 import Toast from "@components/Toast";
+import withAuth from "@auth";
 import styles from "@styles/ChooseDifficulty.module.scss";
-//
-// import checkIcon from "@icons/checkIcon";
-// import errorIcon from "../src/assets/images/error.svg";
-// import infoIcon from "../src/assets/images/info.svg";
-// import warningIcon from "../src/assets/images/warning.svg";
 
-export default function chooseDifficulty() {
-  const [Difficulty, setDifficulty] = useState([]);
+function chooseDifficulty() {
+  const [difficulty, setDifficulty] = useState([]);
   const testList = [
     {
       id: 1,
@@ -36,6 +32,7 @@ export default function chooseDifficulty() {
       backgroundColor: "#f0ad4e",
     },
   ];
+
   return (
     <div className={styles.ChooseDifficulty}>
       <div className={styles.ChooseDifficulty__text}>
@@ -72,3 +69,5 @@ export default function chooseDifficulty() {
     </div>
   );
 }
+
+export default withAuth(chooseDifficulty, "root");

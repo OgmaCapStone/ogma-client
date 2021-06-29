@@ -3,9 +3,10 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import Layout from "@components/Layout";
+import withAuth from "@auth";
 import styles from "@styles/Results.module.scss";
 
-export default function Home() {
+function Home() {
   return (
     <Layout>
       <Head>
@@ -19,13 +20,16 @@ export default function Home() {
 
       <main className={styles.results__main}>
         <div className={styles.results__info}>
-          <h2 className={styles.results__title}>
-            Quiz incompleted!
-          </h2>
+          <h2 className={styles.results__title}>Quiz incompleted!</h2>
           <h2 className={styles.results__title}>
             Review your notes and try again!
           </h2>
-          <Image width={600} height={600} src="/images/incompleteDesktop.png" alt="Complete test image" />
+          <Image
+            width={600}
+            height={600}
+            src="/images/incompleteDesktop.png"
+            alt="Complete test image"
+          />
           <button type="button" className={styles.results__primaryBtn}>
             <Link href="/profile">Try again</Link>
           </button>
@@ -37,3 +41,5 @@ export default function Home() {
     </Layout>
   );
 }
+
+export default withAuth(Home, "root");
