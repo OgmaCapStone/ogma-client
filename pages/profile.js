@@ -56,8 +56,8 @@ function profile() {
       </section>
       <section className={styles.skills_container}>
         <h1>Skills</h1>
-        <button type="button" onClick={() => setShowModal(true)}>
-          Open
+        <button type="button" className={styles.modal_btn} onClick={() => setShowModal(true)}>
+          Open skill
         </button>
         {showModal && <TechModal hideModal={setShowModal} />}
       </section>

@@ -11,10 +11,10 @@ const TechModal = ({ hideModal }) =>
         <button className={styles.tech_btn} type="button">JavaScript</button>
       </section>
       <section className={styles.modal_body}>
-        <section className={styles.tech_level}>Junior</section>
-        <section className={styles.tech_level}>Mid</section>
-        <section className={styles.tech_level}>Senior</section>
-        <section className={styles.tech_level}>Legendary</section>
+        <section className={styles.tech_level_success}>Junior</section>
+        <section className={styles.tech_level_success}>Mid</section>
+        <section className={styles.tech_level_unsuccess }>Senior</section>
+        <section className={styles.tech_level_unsuccess }>Legendary</section>
       </section>
     </section>
   </section>

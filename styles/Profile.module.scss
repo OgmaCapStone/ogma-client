@@ -97,15 +97,11 @@
   margin-top: 10%;
   h1 {
     @include subTittleMobile;
-    left: 15px;
-    line-height: 120%;
-    position: absolute;
   }
-  button{
-    display: none;
+  .modal_btn {
+    @include ButtonDisableMobile;
   }
 }
-
 
 
 @media screen and (min-width: $breakpoint-lg){
@@ -138,6 +134,9 @@
   .skills_container {
     h1 {
       @include subTittleDesktop;
+    }
+    .modal_btn {
+      @include ButtonDisableDesktop;
     }
   }
 }

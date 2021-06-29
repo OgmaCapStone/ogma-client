@@ -75,6 +75,28 @@
   font-weight: bold;
 }
 
+@mixin ButtonLevelSuccess {
+  display: flex;
+  align-items: center;
+  background: $color-success-container;
+  border-radius: $border-radius-size;
+  color: $color-success;
+  height: 46px;
+  margin-bottom: 6px;
+  padding: 5px 0px 0px 20px;
+}
+
+@mixin ButtonLevelUnsuccess {
+  display: flex;
+  align-items: center;
+  background: $color-danger-container;
+  border-radius: $border-radius-size;
+  color: $color-danger;
+  height: 46px;
+  margin-bottom: 6px;
+  padding: 5px 0px 0px 20px;
+}
+
 @mixin InputActiveMobile {
   background-color: $color-white;
   border: 1px solid rgb($color-text-grey, 0.7);
