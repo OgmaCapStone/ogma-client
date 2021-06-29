@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@styles/selectOptions.module.scss";
+import styles from "@styles/SelectOptions.module.scss";
 
 export default function selectOptions({
   onChange,
@@ -7,6 +7,7 @@ export default function selectOptions({
   icon,
   background,
   className,
+  cardStyles,
 }) {
   return (
     <div
@@ -26,7 +27,7 @@ export default function selectOptions({
           <div
             className={`${styles[`options__${background || "default"}`]} ${
               styles.options__card
-            }`}
+            } ${styles[`options__${cardStyles}`]}`}
           >
             <div className={styles.options__info}>
               {icon}

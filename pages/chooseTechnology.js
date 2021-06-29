@@ -26,7 +26,7 @@ function choseTechnology() {
         />
       </Head>
       <div className={styles.ChooseTechnology}>
-        <div className={styles.ChooseTechnology__text}>
+        <div className={`${styles.ChooseTechnology__text}`}>
           <h2>Choose a technology</h2>
           <p>
             Practice your skills with a set of questions to improve your level.
@@ -34,6 +34,7 @@ function choseTechnology() {
         </div>
         <Options
           className={styles.ChooseTechnology__options}
+          cardStyles="withImage"
           onChange={(e) => {
             dispatch({ type: "SET_TECHNOLOGY", technology: e.target.value });
           }}

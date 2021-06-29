@@ -51,6 +51,11 @@
 
   &__input {
     @include InputActiveDesktop;
+
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+      max-width: none;
+    }
   }
 
   &__submit {
