@@ -1,6 +1,7 @@
-import React, { useState, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import Layout from "@components/Layout";
 import { store } from "@context";
 import Options from "@components/SelectOptions";
@@ -9,7 +10,12 @@ import { DotListIcon } from "@icons";
 import styles from "@styles/ChooseDifficulty.module.scss";
 
 function chooseDifficulty() {
-  const { dispatch } = useContext(store);
+  const { dispatch, state } = useContext(store);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!state.technology) router.replace("/chooseTechnology");
+  }, []);
 
   return (
     <Layout>
