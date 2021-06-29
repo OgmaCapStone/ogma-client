@@ -2,66 +2,67 @@
 @import "./mixins";
 
 .landing {
-    &__main {
+  &__main {
     display: flex;
     flex-direction: column;
     margin-top: 25%;
+  }
+  &__heroImage {
+    display: none;
+  }
+  &__heroInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    @include tittleMobile;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  &__text {
+    @include BodyTextBoldMobile;
+    margin-top: 30px;
+  }
+  &__primaryBtn {
+    @include ButtonPrimaryMobile;
+    margin-top: 20px;
+    a {
+      color: $color-white;
     }
-    &__heroImage {
-        display: none;
-    }
-    &__heroInfo{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  .landing {
+    &__main {
+      margin-top: 25%;
     }
     &__title {
-        @include tittleMobile;
-        text-transform: uppercase;
-        margin-bottom: 15px;
+      @include tittleDesktop;
     }
     &__text {
-        @include BodyTextBoldMobile;
-        margin-top: 30px;
-        }
+      @include BodyTextBoldDesktop;
+    }
     &__primaryBtn {
-        @include ButtonPrimaryMobile;
-        margin-top: 20px;
-        a {
-            color: $color-white;
-        }
+      @include ButtonPrimaryDesktop;
     }
+  }
 }
 
-@media screen and (min-width: $breakpoint-lg){
-    .landing{
-        &__main {
-            margin-top: 25%;
-        }
-        &__title {
-            @include tittleDesktop;
-        }
-        &__text {
-            @include BodyTextBoldDesktop
-        }
-        &__primaryBtn {
-            @include ButtonPrimaryDesktop;
-        }
+@media screen and (min-width: $breakpoint-lg) {
+  .landing {
+    &__main {
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 15%;
     }
-}
-
-@media screen and (min-width: $breakpoint-xl){
-    .landing{
-        &__main {
-            flex-direction: row;
-            justify-content: space-around;
-            margin-top: 15%;
-        }
-        &__heroImage{
-            display: block;
-        }
-        &__heroInfo {
-            margin-top: 20px;
-        }
+    &__heroImage {
+      display: block;
     }
+    &__heroInfo {
+      margin-top: 20px;
+    }
+  }
 }
