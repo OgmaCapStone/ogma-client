@@ -11,6 +11,7 @@
 }
 .footer_copy {
   @include BodyTextBoldMobile; 
+  font-size: $sizeBodyMobileSmall;
   line-height: 120%;
   text-align: center;
   color: $color-white;
@@ -22,6 +23,7 @@
 }
 .footer_terms {
   @include BodyTextMobile;
+  font-size: $sizeBodyMobileSmall;
   line-height: 120%;
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
@@ -30,4 +32,10 @@
   left: 4.17%;
   right: 4.17%;
   bottom: 16px;
+}
+
+@media screen and (min-width: $breakpoint-md){
+  .footer_copy, .footer_terms {
+    font-size: $sizeBodyMobile;
+  }
 }

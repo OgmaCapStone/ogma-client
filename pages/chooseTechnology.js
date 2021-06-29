@@ -32,32 +32,6 @@ export default function choseTechnology() {
         }))}
         background="glass"
       />
-
-      <CardTechnology
-        technologyName="JavaScript"
-        technologyDescription="Technology’s summary"
-        technologyImage="https://dummyimage.com/200x200/000/fff"
-      />
-      {/* <CardTechnology
-        technologyName="Python"
-        technologyDescription="Technology’s summary"
-        technologyImage="https://dummyimage.com/100x100/000/fff"
-      />
-      <CardTechnology
-        technologyName="HTML"
-        technologyDescription="Technology’s summary"
-        technologyImage="https://dummyimage.com/100x100/000/fff"
-      />
-      <CardTechnology
-        technologyName="CSS"
-        technologyDescription="Technology’s summary"
-        technologyImage="https://dummyimage.com/100x100/000/fff"
-      />
-      <CardTechnology
-        technologyName="React"
-        technologyDescription="Technology’s summary"
-        technologyImage="https://dummyimage.com/100x100/000/fff"
-      /> */}
     </div>
   );
 }
