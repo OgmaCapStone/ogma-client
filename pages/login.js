@@ -1,16 +1,18 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { signIn } from "next-auth/client";
 import { initialState, reducer } from "@reducers/login";
-import { GithubIcon, GoogleIcon } from "@icons";
+import { GithubIcon, GoogleIcon, ErrorIcon } from "@icons";
 import Layout from "@components/Layout";
 import withAuth from "@auth";
+import Toast from "@components/Toast";
 import styles from "@styles/Login.module.scss";
 
 function login() {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [alert, setAlert] = useState(false);
   const router = useRouter();
 
   function handleSubmit(e) {
@@ -19,19 +21,29 @@ function login() {
     signIn("credentials", {
       username: state.email,
       password: state.password,
-      callbackUrl: "/",
+      callbackUrl: "/login",
       redirect: false,
-    }).then((res) => res.url && router.push("/profile"));
+    }).then((res) => {
+      if (res.url && !res.url?.includes("error")) {
+        router.push("/profile");
+      } else {
+        setAlert(true);
+
+        setTimeout(() => {
+          setAlert(false);
+        }, 3000);
+      }
+    });
   }
 
   return (
     <Layout header footer>
       <Head>
-      <title>Ogma App</title>
-      <meta
-        name="description"
-        content="Web app to practice for yout next job interview"
-      />
+        <title>Ogma App</title>
+        <meta
+          name="description"
+          content="Web app to practice for yout next job interview"
+        />
       </Head>
       <div className={styles.login__container}>
         <h1 className={styles.login__h1}>Log In</h1>
@@ -88,6 +100,21 @@ function login() {
           </Link>
         </p>
       </div>
+      {alert && (
+        <Toast
+          toastList={[
+            {
+              backgroundColor: "#d8000c",
+              title: "Error!",
+              description: "Invalid username or password",
+              icon: <ErrorIcon />,
+            },
+          ]}
+          position="top-left"
+          autoDelete
+          autoDeleteTime={3000}
+        />
+      )}
     </Layout>
   );
 }

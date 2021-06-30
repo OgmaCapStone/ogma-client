@@ -62,7 +62,7 @@ const callbacks = {
     const createSocialUser = async () => {
       const userDB = await getUserByEmail(user.email)
         .then((res) => res.response)
-        .catch(() => { });
+        .catch(() => {});
 
       if (!userDB) {
         const res = await createUser({
