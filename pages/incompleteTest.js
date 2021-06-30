@@ -31,7 +31,7 @@ function Home() {
             alt="Complete test image"
           />
           <button type="button" className={styles.results__primaryBtn}>
-            <Link href="/profile">Try again</Link>
+            <Link href="/chooseTechnology">Try again</Link>
           </button>
           <button type="button" className={styles.results__secondaryBtn}>
             <Link href="/profile">Go back</Link>

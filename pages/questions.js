@@ -38,10 +38,21 @@ function questions() {
   }
 
   function nextQuestion() {
-    if (activeQuestion < questions.length - 1) {
-      setActiveQuestion((state) => state + 1);
+    if (activeQuestion < questions.length) {
       dispatch({ type: "RATE_QUESTION", question: answer[0] });
       answer[1].checked = false;
+    }
+
+    if (activeQuestion < questions.length - 1) {
+      setActiveQuestion((state) => state + 1);
+    } else {
+      const checkCorrect = state.questions.filter((item) => item === false);
+
+      if (checkCorrect.length === 0) {
+        router.replace("/completeTest");
+      } else {
+        router.replace("/incompleteTest");
+      }
     }
   }
 
