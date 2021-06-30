@@ -1,0 +1,91 @@
+@import "./variables";
+@import "./mixins";
+
+.modal_bg {
+  align-items: center;
+  background: rgba(0, 41, 43, 0.8);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+  backdrop-filter: blur(2px);
+}
+
+.edit_container {
+  background: $color-white;
+  border-radius: $border-radius-size;
+  box-shadow: 0px 14px 23px rgba(28, 37, 44, 0.08);
+  display: grid;
+  grid-template-rows: 50% 50% 50%;
+  grid-template-columns: 100%;
+  height: auto;
+  max-width: 76%;
+  width: 525px;
+}
+
+.edit_header {
+  height: 70px;
+  grid-row: 1/2;
+  padding: 15px;
+  h1 {
+    @include headline3Desktop;
+    text-align: center;
+  }
+  hr {
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px $color-secondary inset;
+  }
+}
+
+.edit_body {
+  grid-row: 2/3;
+}
+
+.form_group {
+  padding: 10px;
+  label {
+    display: flex;
+    justify-content: center;
+  }
+  input {
+    display: block;
+    margin: 10px auto;
+    width: 50%;
+  }
+}
+
+.edit_footer {
+  align-items: center;
+  display: flex;
+  grid-row: 3/4;
+  height: 50px;
+  padding: 5px;
+  justify-content: space-evenly;
+  .cancel_btn {
+    background: $color-danger-container;
+    border: none;
+    border-radius: $border-radius-size;
+    box-shadow: $shadow-large-drop;
+    color: $color-danger;
+    font-family: $fontSecondary;
+    font-weight: 900;
+    height: 35px;
+    width: 120px;
+  }
+  .submit_btn {
+    background: $color-success-container;
+    border: none;
+    border-radius: $border-radius-size;
+    box-shadow: $shadow-large-drop;
+    color: $color-success;
+    font-family: $fontSecondary;
+    font-weight: 900;
+    height: 35px;
+    width: 120px;
+  }
+}
