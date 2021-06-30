@@ -33,7 +33,6 @@ function questions() {
         questions[activeQuestion].correct_answer_index
       ];
 
-    console.log(value, correctAnswer, value === correctAnswer);
     setAnswer([value === correctAnswer, e.target]);
   }
 
