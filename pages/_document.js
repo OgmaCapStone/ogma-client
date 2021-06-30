@@ -29,6 +29,10 @@ class MyDocument extends Document {
             href="favicon/favicon-16x16.png"
           />
           <link rel="manifest" href="favicon/site.webmanifest" />
+          <meta
+            name="google-site-verification"
+            content="nGTQsxvkaLxx9yRpigc093WuA9BGZXW3vptFYNtf6k0"
+          />
         </Head>
         <body>
           <Main />
