@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
+import { store } from "@context";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
@@ -7,6 +9,23 @@ import withAuth from "@auth";
 import styles from "@styles/Results.module.scss";
 
 function Home() {
+  const { state } = useContext(store);
+  const router = useRouter();
+  const [incorrectAnswers, setIncorrectAnswers] = useState(0);
+
+  function getIncorrectAnswersCount() {
+    const { questions } = state;
+    const incorrectAnswers = questions.filter((item) => item === false);
+
+    setIncorrectAnswers(incorrectAnswers.length);
+  }
+
+  useEffect(() => {
+    getIncorrectAnswersCount();
+
+    if (!state.technology) router.replace("/profile");
+  }, []);
+
   return (
     <Layout>
       <Head>
@@ -23,6 +42,9 @@ function Home() {
           <h2 className={styles.results__title}>Quiz incompleted!</h2>
           <h2 className={styles.results__title}>
             Review your notes and try again!
+          </h2>
+          <h2 className={styles.results__title}>
+            {`${incorrectAnswers} incorrect answers of ${state.questions.length}`}
           </h2>
           <Image
             width={600}
