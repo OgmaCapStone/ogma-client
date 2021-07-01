@@ -12,11 +12,23 @@
         align-items: center;
     }
     &__title {
-        @include subTittleMobile;
+        @include tittleMobile;
         text-align: center;
         padding-left: 10px;
         padding-right: 10px;
         max-width: 768px;
+    }
+    &__subtitle {
+        @include subTittleMobile;
+        text-align: center;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 768px;
+    }
+    &__text{
+        @include BodyTextBoldMobile;
+        margin-top: 10px;
     }
     &__primaryBtn {
         @include ButtonPrimaryMobile;
@@ -38,7 +50,13 @@
 @media screen and (min-width: $breakpoint-lg){
     .results{
         &__title {
+            @include tittleDesktop;
+        }
+        &__subtitle {
             @include subTittleDesktop;
+        }
+        &__text{
+            @include BodyTextBoldDesktop;
         }
         &__primaryBtn {
             @include ButtonPrimaryDesktop;

@@ -1,0 +1,13 @@
+@import "./variables";
+@import "./mixins";
+
+.TechLevel {
+  @include headline4Mobile;
+  &.success {
+    @include ButtonLevelSuccess;
+  }
+
+  &.unsuccess {
+    @include ButtonLevelUnsuccess;
+  }
+}
