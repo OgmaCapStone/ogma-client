@@ -34,14 +34,6 @@ export const createUser = async (data) => {
   return res;
 };
 
-// Creating a method to update user
-export const updateUser = async (data) => {
-  const res = await axios
-    .post(`${ENDPOINT_URL}/user/edit`, data)
-    .then((res) => res.data);
-
-  return res;
-}
 export const getUserProgress = async (username) => {
   const res = await axios
     .get(`${process.env.ENDPOINT_URL}/user/progress?username=${username}`)
