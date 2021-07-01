@@ -7,7 +7,9 @@ const TechModal = ({ hideModal }) =>
   <section className={styles.modal_bg}>
     <section className={styles.modal_container}>
       <section className={styles.modal_header}>
-        <button className={styles.close_btn} type="button" onClick={() => hideModal(false)}><ArrowLeftIcon size={26} color="#286064" /> </button>
+        <button className={styles.close_btn} type="button" onClick={() => hideModal(false)}>
+          <ArrowLeftIcon size={26} color="#286064" />
+        </button>
         <button className={styles.tech_btn} type="button">JavaScript</button>
       </section>
       <section className={styles.modal_body}>
