@@ -103,8 +103,7 @@
   }
 }
 
-
-@media screen and (min-width: $breakpoint-lg){
+@media screen and (min-width: $breakpoint-lg) {
   .profile_content {
     display: grid;
     height: 173px;
@@ -116,7 +115,6 @@
   .profile_name {
     h1 {
       @include subTittleDesktop;
-
     }
   }
   .profile_sub {
@@ -127,8 +125,8 @@
   }
   .profile_btn {
     .start_btn {
-    @include ButtonPrimaryDesktop;
-    @include ButtonTextDesktop;
+      @include ButtonPrimaryDesktop;
+      @include ButtonTextDesktop;
     }
   }
   .skills_container {
@@ -136,7 +134,7 @@
       @include subTittleDesktop;
     }
     .modal_btn {
-      display: none;
+      display: flex;
     }
   }
 }
