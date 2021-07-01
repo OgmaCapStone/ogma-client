@@ -20,19 +20,21 @@
   border-radius: $border-radius-size;
   box-shadow: 0px 14px 23px rgba(28, 37, 44, 0.08);
   display: grid;
-  grid-template-rows: 50% 50% 50%;
+  grid-template-rows: 30% 50% 50%;
   grid-template-columns: 100%;
   height: auto;
-  max-width: 76%;
-  width: 525px;
+  max-width: 70%;
+  width: 450px;
 }
 
 .edit_header {
-  height: 70px;
+  height: 30px;
   grid-row: 1/2;
-  padding: 15px;
+  margin: 7px;
   h1 {
-    @include headline3Desktop;
+    @include headline4Mobile;
+    padding-bottom: 4px;
+    font-weight: 900;
     text-align: center;
   }
   hr {
@@ -44,18 +46,23 @@
 
 .edit_body {
   grid-row: 2/3;
+  margin: 5px;
 }
 
 .form_group {
-  padding: 10px;
   label {
     display: flex;
     justify-content: center;
   }
+  label {
+    font-family: $fontSecondary;
+    font-size: $sizeHeadline4Mobile;
+  }
   input {
+    @include InputActiveMobile;
     display: block;
     margin: 10px auto;
-    width: 50%;
+    height: 80%;
   }
 }
 
@@ -64,7 +71,7 @@
   display: flex;
   grid-row: 3/4;
   height: 50px;
-  padding: 5px;
+  margin: 5px;
   justify-content: space-evenly;
   .cancel_btn {
     background: $color-danger-container;
