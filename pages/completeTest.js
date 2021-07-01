@@ -21,9 +21,9 @@ function Home() {
       <main className={styles.results__main}>
         <div className={styles.results__info}>
           <h2 className={styles.results__title}>Quiz completed!</h2>
-          <h2 className={styles.results__title}>
+          <h3 className={styles.results__subtitle}>
             You can move to the next level!
-          </h2>
+          </h3>
           <Image
             width={600}
             height={600}

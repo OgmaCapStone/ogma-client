@@ -39,19 +39,19 @@ function Home() {
 
       <main className={styles.results__main}>
         <div className={styles.results__info}>
-          <h2 className={styles.results__title}>Quiz incompleted!</h2>
           <h2 className={styles.results__title}>
-            Review your notes and try again!
+            You need all correct answers to pass.
           </h2>
-          <h2 className={styles.results__title}>
-            {`${incorrectAnswers} incorrect answers of ${state.questions.length}`}
-          </h2>
+          <h2 className={styles.results__subtitle}>Don&apos;t give up! </h2>
           <Image
             width={600}
             height={600}
             src="/images/incompleteDesktop.png"
             alt="Complete test image"
           />
+          <p className={styles.results__text}>
+            {`${incorrectAnswers} incorrect answers of ${state.questions.length}`}
+          </p>
           <button type="button" className={styles.results__primaryBtn}>
             <Link href="/chooseTechnology">Try again</Link>
           </button>

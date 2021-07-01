@@ -33,3 +33,11 @@ export const createUser = async (data) => {
 
   return res;
 };
+
+export const getUserProgress = async (username) => {
+  const res = await axios
+    .get(`${process.env.ENDPOINT_URL}/user/progress?username=${username}`)
+    .then((res) => res.data);
+
+  return res;
+};
