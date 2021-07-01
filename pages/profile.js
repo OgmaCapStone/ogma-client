@@ -6,7 +6,6 @@ import Head from "next/head";
 import Layout from "@components/Layout";
 import TechModal from "@components/TechModal";
 import EditButton from "@components/EditButton";
-import EditModal from '@components/EditModal'
 import styles from "@styles/Profile.module.scss";
 import withAuth from "@auth";
 
@@ -40,7 +39,6 @@ function profile() {
         <section className={styles.profile_content}>
           <section className={styles.profile_edit}>
             <EditButton />
-            <EditModal />
           </section>
           <section className={styles.profile_name}>
             <h1>{user.name}</h1>
