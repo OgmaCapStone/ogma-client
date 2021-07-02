@@ -10,7 +10,8 @@
       "@styles/*": ["styles/*"],
       "@images/*": ["images/*"],
       "@context": ["src/utils/context/store"],
-      "@auth": ["src/utils/auth/withAuth"]
+      "@auth": ["src/utils/auth/withAuth"],
+      "@constants/*": ["src/utils/constants/*"]
     }
   }
 }
