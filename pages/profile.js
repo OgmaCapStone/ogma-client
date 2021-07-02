@@ -1,22 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { useSession } from "next-auth/client";
 import { getUserByEmail } from "@database/users";
+import { getProgress } from "@database/progress";
 import Link from "next/link";
 import Head from "next/head";
 import Layout from "@components/Layout";
 import TechModal from "@components/TechModal";
 import EditButton from "@components/EditButton";
+import ProgressBar from "@components/ProgressCircleBar";
 import styles from "@styles/Profile.module.scss";
 import withAuth from "@auth";
 
 function profile() {
   const [session, loading] = useSession();
   const [user, setUser] = useState({});
+  const [progress, setProgress] = useState([]);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     if (session && !loading) {
-      getUserByEmail(session.user.email).then((res) => setUser(res.response));
+      getUserByEmail(session.user.email).then((res) => {
+        setUser(res.response);
+        getProgress(res.response.username).then((res2) => setProgress(res2));
+      });
     }
   }, [loading]);
 
@@ -32,7 +38,7 @@ function profile() {
       <section className={styles.profile_container}>
         <section className={styles.profile_header} />
         <img
-          src="/images/Default.jpg"
+          src={`${session?.user.image}.png` || "/images/Default.jpg"}
           id={styles.profile_pic}
           alt="profile-img"
         />
@@ -56,6 +62,12 @@ function profile() {
       </section>
       <section className={styles.skills_container}>
         <h1>Skills</h1>
+        {progress.map((item, index) => (
+          <>
+            <ProgressBar progress={item.percentage} key={`badge-${index}`} />{" "}
+            <p>{item.name}</p>
+          </>
+        ))}
         <button
           type="button"
           className={styles.modal_btn}
