@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { useSession } from "next-auth/client";
 import { useRouter } from "next/router";
 import { store } from "@context";
 import Layout from "@components/Layout";
@@ -7,6 +8,8 @@ import ProgressBar from "@components/ProgressBar";
 import Options from "@components/SelectOptions";
 import { getQuestions } from "@database/questions";
 import withAuth from "@auth";
+import { updateProgress } from "@database/progress";
+import technologiesPercent from "src/utils/constants/technologies";
 import styles from "@styles/questions.module.scss";
 
 function questions() {
@@ -15,6 +18,7 @@ function questions() {
   const [questions, setQuestions] = useState([]);
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [answer, setAnswer] = useState(null);
+  const [session, loading] = useSession();
 
   useEffect(() => {
     if (!state.technology && !state.level) {
@@ -48,6 +52,15 @@ function questions() {
       const checkCorrect = state.questions.filter((item) => item === false);
 
       if (checkCorrect.length === 0) {
+        updateProgress({
+          percentage: technologiesPercent[`${state.technology}-${state.level}`],
+          user: {
+            username: session?.user.username,
+          },
+          technology: {
+            name: state.technology,
+          },
+        });
         router.replace("/completeTest");
       } else {
         router.replace("/incompleteTest");
