@@ -46,7 +46,7 @@ function chooseDifficulty() {
         <title>Choose Difficulty</title>
         <meta
           name="description"
-          content="Web app to practice for yout next job interview"
+          content="Web app to practice for your next job interview"
         />
       </Head>
       <div className={styles.ChooseDifficulty}>
