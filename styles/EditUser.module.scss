@@ -1,0 +1,99 @@
+@import "./variables";
+@import "./mixins";
+
+.modal_bg {
+  align-items: center;
+  background: rgba(0, 41, 43, 0.8);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+  backdrop-filter: blur(2px);
+}
+
+.edit_container {
+  background: $color-white;
+  border-radius: $border-radius-size;
+  box-shadow: 0px 14px 23px rgba(28, 37, 44, 0.08);
+  display: grid;
+  grid-template-rows: 30% 50% 50%;
+  grid-template-columns: 100%;
+  height: auto;
+  max-width: 70%;
+  width: 450px;
+}
+
+.edit_header {
+  height: 30px;
+  grid-row: 1/2;
+  margin: 7px;
+  h1 {
+    @include headline4Mobile;
+    padding-bottom: 4px;
+    font-weight: 900;
+    text-align: center;
+  }
+  hr {
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px $color-secondary inset;
+  }
+}
+
+.edit_body {
+  grid-row: 2/3;
+  margin: 5px;
+}
+
+.form_group {
+  label {
+    display: flex;
+    justify-content: center;
+  }
+  label {
+    font-family: $fontSecondary;
+    font-size: $sizeHeadline4Mobile;
+  }
+  input {
+    @include InputActiveMobile;
+    display: block;
+    margin: 10px auto;
+    height: 80%;
+    width: 80%;
+  }
+}
+
+.edit_footer {
+  align-items: center;
+  display: flex;
+  grid-row: 3/4;
+  height: 50px;
+  margin: 5px;
+  justify-content: space-evenly;
+  .cancel_btn {
+    background: $color-danger-container;
+    border: none;
+    border-radius: $border-radius-size;
+    box-shadow: $shadow-large-drop;
+    color: $color-danger;
+    font-family: $fontSecondary;
+    font-weight: 900;
+    height: 35px;
+    width: 120px;
+  }
+  .submit_btn {
+    background: $color-success-container;
+    border: none;
+    border-radius: $border-radius-size;
+    box-shadow: $shadow-large-drop;
+    color: $color-success;
+    font-family: $fontSecondary;
+    font-weight: 900;
+    height: 35px;
+    width: 120px;
+  }
+}
