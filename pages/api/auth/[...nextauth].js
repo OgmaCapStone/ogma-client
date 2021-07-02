@@ -17,10 +17,12 @@ const providers = [
 
       if (user) {
         if (compareSync(credentials.password, user.password)) {
+          console.log(user);
           return {
             name: user.name,
             email: user.email,
-            image: user.image,
+            image: user.profile_pic,
+            username: user.username,
           };
         }
       }
@@ -73,7 +75,7 @@ const callbacks = {
           username: user.username,
           badges: null,
           prefered_technologies: null,
-          profile_pic: user.image,
+          profile_pic: user.profile_pic,
         });
 
         return res;
