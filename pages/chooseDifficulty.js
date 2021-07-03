@@ -7,6 +7,7 @@ import { store } from "@context";
 import Options from "@components/SelectOptions";
 import withAuth from "@auth";
 import { DotListIcon, ErrorIcon } from "@icons";
+import { insertTechnology } from "@database/technologies";
 import styles from "@styles/ChooseDifficulty.module.scss";
 
 const Toast = dynamic(() => import("@components/Toast"));
@@ -18,7 +19,8 @@ function chooseDifficulty() {
   const [alert, setAlert] = useState(false);
 
   useEffect(() => {
-    if (!state.technology) router.replace("/chooseTechnology");
+    if (!state.technology && Object.keys(state.user).length === 0)
+      router.replace("/chooseTechnology");
   }, []);
 
   function handleChange(e) {
@@ -30,6 +32,14 @@ function chooseDifficulty() {
 
   function handleSubmit() {
     if (selectedDifficult) {
+      insertTechnology({
+        user: {
+          username: state.user.username,
+        },
+        technology: {
+          name: state.technology,
+        },
+      }).catch((err) => console.error(err));
       router.replace("/questions");
     } else {
       setAlert(true);
@@ -46,7 +56,7 @@ function chooseDifficulty() {
         <title>Choose Difficulty</title>
         <meta
           name="description"
-          content="Web app to practice for yout next job interview"
+          content="Web app to practice for your next job interview"
         />
       </Head>
       <div className={styles.ChooseDifficulty}>
