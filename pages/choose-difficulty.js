@@ -20,7 +20,7 @@ function chooseDifficulty() {
 
   useEffect(() => {
     if (!state.technology && Object.keys(state.user).length === 0)
-      router.replace("/chooseTechnology");
+      router.replace("/choose-technology");
   }, []);
 
   function handleChange(e) {

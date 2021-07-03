@@ -22,6 +22,7 @@
   top: 20px;
 }
 .footer_terms {
+  display: none;
   @include BodyTextMobile;
   font-size: $sizeBodyMobileSmall;
   line-height: 120%;

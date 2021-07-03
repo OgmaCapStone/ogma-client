@@ -67,9 +67,9 @@ function questions() {
               name: state.technology,
             },
           });
-          router.replace("/completeTest");
+          router.replace("/complete-test");
         } else {
-          router.replace("/incompleteTest");
+          router.replace("/incomplete-test");
         }
       }
     } else {
