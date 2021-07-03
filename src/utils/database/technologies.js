@@ -7,3 +7,11 @@ export const getTechnologies = async () => {
 
   return res;
 };
+
+export const insertTechnology = async (data) => {
+  const res = await axios
+    .post(`${process.env.ENDPOINT_URL}/user/technology/add`, data)
+    .then((res) => res.data);
+
+  return res;
+};
