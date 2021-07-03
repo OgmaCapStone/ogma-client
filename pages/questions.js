@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useSession } from "next-auth/client";
 import { useRouter } from "next/router";
 import { store } from "@context";
 import Layout from "@components/Layout";
@@ -10,6 +9,8 @@ import { getQuestions } from "@database/questions";
 import withAuth from "@auth";
 import { updateProgress } from "@database/progress";
 import technologiesPercent from "src/utils/constants/technologies";
+import Toast from "@components/Toast";
+import { ErrorIcon } from "@icons";
 import styles from "@styles/questions.module.scss";
 
 function questions() {
@@ -18,6 +19,7 @@ function questions() {
   const [questions, setQuestions] = useState([]);
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [answer, setAnswer] = useState(null);
+  const [alert, setAlert] = useState(false);
 
   useEffect(() => {
     if (!state.technology && !state.level) {
@@ -41,30 +43,39 @@ function questions() {
   }
 
   function nextQuestion() {
-    if (activeQuestion < questions.length) {
-      dispatch({ type: "RATE_QUESTION", question: answer[0] });
-      answer[1].checked = false;
-    }
-
-    if (activeQuestion < questions.length - 1) {
-      setActiveQuestion((state) => state + 1);
-    } else {
-      const checkCorrect = state.questions.filter((item) => item === false);
-
-      if (checkCorrect.length === 0) {
-        updateProgress({
-          percentage: technologiesPercent[`${state.technology}-${state.level}`],
-          user: {
-            username: state.user.username,
-          },
-          technology: {
-            name: state.technology,
-          },
-        });
-        router.replace("/completeTest");
-      } else {
-        router.replace("/incompleteTest");
+    if (answer) {
+      if (activeQuestion < questions.length) {
+        dispatch({ type: "RATE_QUESTION", question: answer[0] });
+        answer[1].checked = false;
       }
+
+      if (activeQuestion < questions.length - 1) {
+        setActiveQuestion((state) => state + 1);
+      } else {
+        const checkCorrect = state.questions.filter((item) => item === false);
+
+        if (checkCorrect.length === 0) {
+          updateProgress({
+            percentage:
+              technologiesPercent[`${state.technology}-${state.level}`],
+            user: {
+              username: state.user.username,
+            },
+            technology: {
+              name: state.technology,
+            },
+          });
+          router.replace("/completeTest");
+        } else {
+          router.replace("/incompleteTest");
+        }
+      }
+    } else {
+      setAlert(true);
+
+      setTimeout(() => {
+        setAlert(false);
+      }, 3000);
     }
   }
 
@@ -117,6 +128,21 @@ function questions() {
         </>
       ) : (
         <h1>Loading...</h1>
+      )}
+      {alert && (
+        <Toast
+          toastList={[
+            {
+              backgroundColor: "#d8000c",
+              title: "Error!",
+              description: "You must choose an answer!",
+              icon: <ErrorIcon />,
+            },
+          ]}
+          position="top-left"
+          autoDelete
+          autoDeleteTime={3000}
+        />
       )}
     </Layout>
   );
