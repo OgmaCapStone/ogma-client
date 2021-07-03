@@ -10,8 +10,9 @@ import withAuth from "@auth";
 import { updateProgress } from "@database/progress";
 import technologiesPercent from "src/utils/constants/technologies";
 import Toast from "@components/Toast";
-import { ErrorIcon } from "@icons";
-import styles from "@styles/questions.module.scss";
+import ConfirmationModal from "@components/confirmationModal";
+import { ErrorIcon, CloseIcon } from "@icons";
+import styles from "@styles/Questions.module.scss";
 
 function questions() {
   const { dispatch, state } = useContext(store);
@@ -20,6 +21,7 @@ function questions() {
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [answer, setAnswer] = useState(null);
   const [alert, setAlert] = useState(false);
+  const [modal, setModal] = useState(false);
 
   useEffect(() => {
     if (!state.technology && !state.level) {
@@ -79,6 +81,12 @@ function questions() {
     }
   }
 
+  function closeTest() {
+    dispatch({ type: "SET_TECHNOLOGY", technology: "" });
+    dispatch({ type: "SET_LEVEL", level: "" });
+    router.replace("/profile");
+  }
+
   return (
     <Layout>
       <Head>
@@ -91,6 +99,12 @@ function questions() {
 
       {questions.length !== 0 ? (
         <>
+          <div
+            className={styles.questions__close}
+            onClick={() => setModal(true)}
+          >
+            <CloseIcon size={16} color="#000" />
+          </div>
           <header className={styles.questions__header}>
             <ProgressBar
               completed={(activeQuestion * 100) / questions.length}
@@ -142,6 +156,13 @@ function questions() {
           position="top-left"
           autoDelete
           autoDeleteTime={3000}
+        />
+      )}
+      {modal && (
+        <ConfirmationModal
+          title="Are you sure you want to exit the test?"
+          onAccept={closeTest}
+          onClose={() => setModal(false)}
         />
       )}
     </Layout>

@@ -32,5 +32,7 @@ module.exports = {
     "no-param-reassign": ["error", { props: false }],
     "no-case-declarations": ["off"],
     "jsx-a11y/label-has-associated-control": ["off"],
+    "jsx-a11y/click-events-have-key-events": ["off"],
+    "jsx-a11y/no-static-element-interactions": ["off"],
   },
 };

@@ -1,0 +1,75 @@
+@import "./_mixins.scss";
+@import "./_variables.scss";
+
+.modal {
+  &__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba($color-primary, 0.5);
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 2rem;
+    width: fit-content;
+    height: fit-content;
+    background: $color-white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    animation: zoom 0.3s ease-in-out forwards;
+    -webkit-animation: zoom 0.3s ease-in-out forwards;
+  }
+
+  &__title {
+    @include BodyTextBoldDesktop;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    @include BodyTextDesktop;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  &__close {
+    @include ButtonSecondaryDesktop;
+    @include ButtonTextDesktop;
+  }
+
+  &__accept {
+    @include ButtonPrimaryDesktop;
+    @include ButtonTextDesktop;
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}
