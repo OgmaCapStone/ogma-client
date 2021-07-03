@@ -38,7 +38,7 @@ function Home() {
         <title>Ogma App</title>
         <meta
           name="description"
-          content="Web app to practice for yout next job interview"
+          content="Web app to practice for your next job interview"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
