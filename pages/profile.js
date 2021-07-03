@@ -16,8 +16,24 @@ function profile() {
   const { dispatch } = useContext(store);
   const [session, loading] = useSession();
   const [user, setUser] = useState({});
-  const [progress, setProgress] = useState([]);
+  const [progress, setProgress] = useState(null);
   const [showModal, setShowModal] = useState(false);
+
+  function getDevLevel() {
+    let level = "";
+    const percentSum = progress.reduce(
+      (prev, current) => current.percentage + prev,
+      0
+    );
+    const avgSum = percentSum / progress.length;
+
+    if (avgSum <= 100) level = "legendary";
+    if (avgSum <= 90) level = "senior";
+    if (avgSum <= 60) level = "mid";
+    if (avgSum <= 30) level = "junior";
+
+    return level;
+  }
 
   useEffect(() => {
     if (session && !loading) {
@@ -43,7 +59,7 @@ function profile() {
       <section className={styles.profile_container}>
         <section className={styles.profile_header} />
         <img
-          src={`${session?.user.image}.png` || "/images/Default.jpg"}
+          src={session?.user.image || "/images/default.jpg"}
           id={styles.profile_pic}
           alt="profile-img"
         />
@@ -55,8 +71,12 @@ function profile() {
             <h1>{user.name}</h1>
           </section>
           <section className={styles.profile_sub}>
-            <span id={styles.level}>Mid Developer</span>
-            <span id={styles.techs}>Insert prefered technologies here!</span>
+            {progress && (
+              <span id={styles.level}>{`${getDevLevel()} developer`}</span>
+            )}
+            <span id={styles.techs}>
+              {user.prefered_technologies?.map((item) => `${item} • `)}
+            </span>
           </section>
           <section className={styles.profile_btn}>
             <button type="button" className={styles.start_btn}>
