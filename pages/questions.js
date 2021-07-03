@@ -10,7 +10,7 @@ import withAuth from "@auth";
 import { updateProgress } from "@database/progress";
 import technologiesPercent from "src/utils/constants/technologies";
 import Toast from "@components/Toast";
-import ConfirmationModal from "@components/confirmationModal";
+import ConfirmationModal from "@components/ConfirmationModal";
 import { ErrorIcon, CloseIcon } from "@icons";
 import styles from "@styles/Questions.module.scss";
 
