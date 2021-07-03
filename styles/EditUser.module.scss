@@ -40,7 +40,7 @@
   hr {
     height: 10px;
     border: 0;
-    box-shadow: 0 10px 10px -10px $color-secondary inset;
+    box-shadow: 0 10px 10px -10px $color-text-dark inset;
   }
 }
 
@@ -52,11 +52,10 @@
 .form_group {
   label {
     display: flex;
-    justify-content: center;
-  }
-  label {
     font-family: $fontSecondary;
-    font-size: $sizeHeadline4Mobile;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
   }
   input {
     @include InputActiveMobile;
@@ -81,6 +80,7 @@
     box-shadow: $shadow-large-drop;
     color: $color-danger;
     font-family: $fontSecondary;
+    font-size: 12px;
     font-weight: 900;
     height: 35px;
     width: 100px;
@@ -92,6 +92,7 @@
     box-shadow: $shadow-large-drop;
     color: $color-success;
     font-family: $fontSecondary;
+    font-size: 12px;
     font-weight: 900;
     height: 35px;
     width: 100px;
