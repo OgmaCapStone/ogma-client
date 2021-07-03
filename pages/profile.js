@@ -60,7 +60,7 @@ function profile() {
           </section>
           <section className={styles.profile_btn}>
             <button type="button" className={styles.start_btn}>
-              <Link href="/chooseTechnology">Start now</Link>
+              <Link href="/choose-technology">Start now</Link>
             </button>
           </section>
         </section>

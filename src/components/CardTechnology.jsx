@@ -13,7 +13,7 @@ const CardTechnology = ({
           <h3>{technologyName}</h3>
           <p>{technologyDescription}</p>
         </div>
-        <img src={technologyImage} alt="technology image" />
+        <img src={technologyImage} alt="technology logo" />
       </div>
     </div>
   </div>
