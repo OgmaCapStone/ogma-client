@@ -18,7 +18,6 @@ function questions() {
   const [questions, setQuestions] = useState([]);
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [answer, setAnswer] = useState(null);
-  const [session, loading] = useSession();
 
   useEffect(() => {
     if (!state.technology && !state.level) {
@@ -37,6 +36,7 @@ function questions() {
         questions[activeQuestion].correct_answer_index
       ];
 
+    console.log(value === correctAnswer);
     setAnswer([value === correctAnswer, e.target]);
   }
 
@@ -55,7 +55,7 @@ function questions() {
         updateProgress({
           percentage: technologiesPercent[`${state.technology}-${state.level}`],
           user: {
-            username: session?.user.username,
+            username: state.user.username,
           },
           technology: {
             name: state.technology,
