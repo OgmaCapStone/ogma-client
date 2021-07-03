@@ -17,7 +17,6 @@ const providers = [
 
       if (user) {
         if (compareSync(credentials.password, user.password)) {
-          console.log(user);
           return {
             name: user.name,
             email: user.email,
