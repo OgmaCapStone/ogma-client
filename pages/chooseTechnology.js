@@ -13,13 +13,14 @@ import styles from "@styles/ChooseTechnology.module.scss";
 const Toast = dynamic(() => import("@components/Toast"));
 
 function choseTechnology() {
-  const { dispatch } = useContext(store);
+  const { state, dispatch } = useContext(store);
   const router = useRouter();
   const [technology, setTechnology] = useState([]);
   const [selectedTechnology, setSelectedTechnology] = useState("");
   const [alert, setAlert] = useState(false);
 
   useEffect(() => {
+    if (Object.keys(state.user).length === 0) router.replace("/profile");
     getTechnologies().then((res) => setTechnology(res.response));
   }, []);
 
