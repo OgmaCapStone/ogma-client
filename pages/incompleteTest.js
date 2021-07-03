@@ -21,9 +21,15 @@ function Home() {
   }
 
   useEffect(() => {
-    getIncorrectAnswersCount();
-
-    if (!state.technology) router.replace("/profile");
+    if (
+      !state.technology &&
+      !state.level &&
+      Object.keys(state.user).length === 0
+    ) {
+      router.replace("/profile");
+    } else {
+      getIncorrectAnswersCount();
+    }
   }, []);
 
   return (
@@ -53,7 +59,7 @@ function Home() {
             {`${incorrectAnswers} incorrect answers of ${state.questions.length}`}
           </p>
           <button type="button" className={styles.results__primaryBtn}>
-            <Link href="/chooseTechnology">Try again</Link>
+            <Link href="/questions">Try again</Link>
           </button>
           <button type="button" className={styles.results__secondaryBtn}>
             <Link href="/profile">Go back</Link>
