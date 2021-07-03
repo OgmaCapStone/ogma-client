@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { store } from "@context";
 import { useSession } from "next-auth/client";
 import { getUserByEmail } from "@database/users";
 import { getProgress } from "@database/progress";
@@ -12,6 +13,7 @@ import styles from "@styles/Profile.module.scss";
 import withAuth from "@auth";
 
 function profile() {
+  const { dispatch } = useContext(store);
   const [session, loading] = useSession();
   const [user, setUser] = useState({});
   const [progress, setProgress] = useState([]);
@@ -21,7 +23,10 @@ function profile() {
     if (session && !loading) {
       getUserByEmail(session.user.email).then((res) => {
         setUser(res.response);
-        getProgress(res.response.username).then((res2) => setProgress(res2));
+        dispatch({ type: "SET_USER", user: res.response });
+        getProgress(res.response.username)
+          .then((res2) => setProgress(res2))
+          .catch(() => setProgress(null));
       });
     }
   }, [loading]);
@@ -62,12 +67,16 @@ function profile() {
       </section>
       <section className={styles.skills_container}>
         <h1>Skills</h1>
-        {progress.map((item, index) => (
-          <>
-            <ProgressBar progress={item.percentage} key={`badge-${index}`} />{" "}
-            <p>{item.name}</p>
-          </>
-        ))}
+        {progress ? (
+          progress.map((item, index) => (
+            <>
+              <ProgressBar progress={item.percentage} key={`badge-${index}`} />{" "}
+              <p>{item.name}</p>
+            </>
+          ))
+        ) : (
+          <p>There&apos;s no data</p>
+        )}
         <button
           type="button"
           className={styles.modal_btn}
