@@ -4,6 +4,7 @@ const initialState = {
   technology: "",
   level: "",
   questions: "",
+  user: {},
 };
 const store = createContext(initialState);
 const { Provider } = store;
@@ -27,6 +28,12 @@ const ContextProvider = ({ children }) => {
         return {
           ...state,
           questions: [...state.questions, action.question],
+        };
+
+      case "SET_USER":
+        return {
+          ...state,
+          user: action.user,
         };
 
       default:
