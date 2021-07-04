@@ -27,18 +27,20 @@
   -moz-transition: box-shadow 0.3s ease-in-out;
   -ms-transition: box-shadow 0.3s ease-in-out;
   -o-transition: box-shadow 0.3s ease-in-out;
-  
   &:hover{
     color: #fff;
-        background-color: $color-primary;
+    background-color: $color-primary;
   }
-  &__Wrapper{
+  &__Wrapper {
     display: flex;
   }
   &__Text {
     @include BodyTextBoldMobile;
     text-transform: capitalize;
     padding-right: 10px;
+  }
+  &__Icon {
+    display: none;
   }
 }
 
@@ -48,5 +50,4 @@
       @include BodyTextBoldDesktop;
     }
   }
-  
 }
