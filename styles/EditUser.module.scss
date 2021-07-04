@@ -20,7 +20,7 @@
   border-radius: $border-radius-size;
   box-shadow: 0px 14px 23px rgba(28, 37, 44, 0.08);
   display: grid;
-  grid-template-rows: 30% 50% 50%;
+  grid-template-rows: auto;
   grid-template-columns: 100%;
   height: auto;
   max-width: 70%;
@@ -40,7 +40,7 @@
   hr {
     height: 10px;
     border: 0;
-    box-shadow: 0 10px 10px -10px $color-secondary inset;
+    box-shadow: 0 10px 10px -10px $color-text-dark inset;
   }
 }
 
@@ -52,11 +52,10 @@
 .form_group {
   label {
     display: flex;
-    justify-content: center;
-  }
-  label {
     font-family: $fontSecondary;
-    font-size: $sizeHeadline4Mobile;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
   }
   input {
     @include InputActiveMobile;
@@ -81,9 +80,10 @@
     box-shadow: $shadow-large-drop;
     color: $color-danger;
     font-family: $fontSecondary;
+    font-size: 12px;
     font-weight: 900;
     height: 35px;
-    width: 120px;
+    width: 100px;
   }
   .submit_btn {
     background: $color-success-container;
@@ -92,8 +92,9 @@
     box-shadow: $shadow-large-drop;
     color: $color-success;
     font-family: $fontSecondary;
+    font-size: 12px;
     font-weight: 900;
     height: 35px;
-    width: 120px;
+    width: 100px;
   }
 }

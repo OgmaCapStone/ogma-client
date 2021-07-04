@@ -25,7 +25,7 @@ function questions() {
 
   useEffect(() => {
     if (!state.technology && !state.level) {
-      router.replace("/chooseTechnology");
+      router.replace("/choose-technology");
     } else {
       getQuestions(state.technology, state.level).then((res) =>
         setQuestions(res.questions)
@@ -53,6 +53,7 @@ function questions() {
 
       if (activeQuestion < questions.length - 1) {
         setActiveQuestion((state) => state + 1);
+        setAnswer(null);
       } else {
         const checkCorrect = state.questions.filter((item) => item === false);
 
@@ -67,9 +68,9 @@ function questions() {
               name: state.technology,
             },
           });
-          router.replace("/completeTest");
+          router.replace("/complete-test");
         } else {
-          router.replace("/incompleteTest");
+          router.replace("/incomplete-test");
         }
       }
     } else {

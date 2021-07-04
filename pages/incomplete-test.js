@@ -9,7 +9,7 @@ import withAuth from "@auth";
 import styles from "@styles/Results.module.scss";
 
 function Home() {
-  const { state } = useContext(store);
+  const { state, dispatch } = useContext(store);
   const router = useRouter();
   const [incorrectAnswers, setIncorrectAnswers] = useState(0);
 
@@ -18,6 +18,11 @@ function Home() {
     const incorrectAnswers = questions.filter((item) => item === false);
 
     setIncorrectAnswers(incorrectAnswers.length);
+  }
+
+  function retryTest() {
+    dispatch({ type: "RESTART_QUESTIONS" });
+    router.replace("/questions");
   }
 
   useEffect(() => {
@@ -58,8 +63,12 @@ function Home() {
           <p className={styles.results__text}>
             {`${incorrectAnswers} incorrect answers of ${state.questions.length}`}
           </p>
-          <button type="button" className={styles.results__primaryBtn}>
-            <Link href="/questions">Try again</Link>
+          <button
+            type="button"
+            className={styles.results__primaryBtn}
+            onClick={retryTest}
+          >
+            Try again
           </button>
           <button type="button" className={styles.results__secondaryBtn}>
             <Link href="/profile">Go back</Link>

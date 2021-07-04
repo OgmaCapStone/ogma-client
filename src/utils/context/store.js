@@ -30,6 +30,9 @@ const ContextProvider = ({ children }) => {
           questions: [...state.questions, action.question],
         };
 
+      case "RESTART_QUESTIONS":
+        return { ...state, questions: [] };
+
       case "SET_USER":
         return {
           ...state,

@@ -33,7 +33,7 @@ function choseTechnology() {
 
   function handleSubmit() {
     if (selectedTechnology) {
-      router.replace("/chooseDifficulty");
+      router.replace("/choose-difficulty");
     } else {
       setAlert(true);
 
