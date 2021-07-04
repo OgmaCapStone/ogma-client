@@ -5,14 +5,17 @@ import { ChevronRightIcon } from "@icons";
 
 const SkillCard = ({ progress, image, techName }) => (
   <div className={styles.SkillCard}>
-    <ProgressBar
-      className={styles.SkillCard__Progress}
-      progress={progress}
-      image={image}
-      techName={techName}
-    />
-    <p className={styles.SkillCard__Text}>{techName}</p>
-    <ChevronRightIcon size={20} className={styles.SkillCard__Icon} />
+    <div className={styles.SkillCard__Progress}>
+      <ProgressBar
+        progress={progress}
+        image={image}
+        techName={techName}
+      />
+    </div>
+    <div className={styles.SkillCard__Wrapper}>
+      <p className={styles.SkillCard__Text}>{techName}</p>
+      <div className={styles.SkillCard__Icon}><ChevronRightIcon size={20} /></div>
+    </div>
   </div>
 );
 
