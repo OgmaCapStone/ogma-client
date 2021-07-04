@@ -79,7 +79,12 @@ function profile() {
               <span id={styles.level}>{`${getDevLevel()} developer`}</span>
             )}
             <span id={styles.techs}>
-              {user.prefered_technologies?.map((item) => `${item} • `)}
+              {user.prefered_technologies?.map(
+                (item, index) =>
+                  `${item} ${
+                    index === user.prefered_technologies?.length - 1 ? "" : "• "
+                  }`
+              )}
             </span>
           </section>
           <section className={styles.profile_btn}>
@@ -95,7 +100,7 @@ function profile() {
           progress.map((item, index) => (
             <SkillCard
               onClick={() => showTechModal(item.name)}
-              progress={item.percentage}
+              progress={item.percentage === 0 ? 0 : item.percentage + 25}
               key={`badge-${index}`}
               techName={item.name}
             />

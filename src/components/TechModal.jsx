@@ -37,7 +37,7 @@ const TechModal = ({ hideModal, user, techName, progress }) => {
           <TechLevel
             level="Junior"
             currentStatus={
-              progress[0].percentage <= 30 ? "unsuccess" : "success"
+              progress[0].percentage >= 15 ? "success" : "unsuccess"
             }
             user={user}
             technology={techName}
@@ -45,7 +45,7 @@ const TechModal = ({ hideModal, user, techName, progress }) => {
           <TechLevel
             level="Mid"
             currentStatus={
-              progress[0].percentage <= 60 ? "unsuccess" : "success"
+              progress[0].percentage >= 45 ? "success" : "unsuccess"
             }
             user={user}
             technology={techName}
@@ -53,7 +53,7 @@ const TechModal = ({ hideModal, user, techName, progress }) => {
           <TechLevel
             level="Senior"
             currentStatus={
-              progress[0].percentage <= 90 ? "unsuccess" : "success"
+              progress[0].percentage >= 75 ? "success" : "unsuccess"
             }
             user={user}
             technology={techName}

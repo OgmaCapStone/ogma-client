@@ -3,6 +3,7 @@
 
 .TechLevel {
   @include headline4Mobile;
+  cursor: pointer;
   &.success {
     @include ButtonLevelSuccess;
   }
