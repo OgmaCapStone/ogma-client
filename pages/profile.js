@@ -20,8 +20,8 @@ function profile() {
   const [showModal, setShowModal] = useState([false, ""]);
 
   const showTechModal = (name) => {
-    setShowModal([true, name])
-  }
+    setShowModal([true, name]);
+  };
 
   function getDevLevel() {
     let level = "";
@@ -49,7 +49,7 @@ function profile() {
           .catch(() => setProgress(null));
       });
     }
-  }, [loading]);
+  }, [loading, state]);
 
   return (
     <Layout header footer>
@@ -93,21 +93,23 @@ function profile() {
         <h1>Skills</h1>
         {progress ? (
           progress.map((item, index) => (
-            <>
-              <SkillCard
-                onClick={() => showTechModal(item.name)}
-                progress={item.percentage}
-                key={`badge-${index}`}
-                techName={item.name}
-              />{" "}
-              {/* <p>{item.name}</p> */}
-            </>
+            <SkillCard
+              onClick={() => showTechModal(item.name)}
+              progress={item.percentage}
+              key={`badge-${index}`}
+              techName={item.name}
+            />
           ))
         ) : (
           <p>There&apos;s no data</p>
         )}
         {showModal[0] && (
-          <TechModal hideModal={setShowModal} user={user.username} techName={showModal[1]} />
+          <TechModal
+            hideModal={setShowModal}
+            user={user.username}
+            techName={showModal[1]}
+            progress={progress.filter((item) => item.name === showModal[1])}
+          />
         )}
       </section>
     </Layout>

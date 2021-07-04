@@ -1,19 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
+import { useRouter } from "next/router";
+import { store } from "@context";
 import styles from "@styles/TechLevel.module.scss";
-import { getUserProgress } from "@database/users";
 
-const TechLevel = ({ level, currentStatus, user }) => {
-  const [progress, setProgrees] = useState({});
-  // useEffect(() => {
-  //   getUserProgress({ user }).then((res) => setProgrees(res.response));
-  // }, []);
+const TechLevel = ({ level, currentStatus, technology }) => {
+  const { dispatch } = useContext(store);
+  const router = useRouter();
+
+  function handleClick() {
+    dispatch({ type: "SET_TECHNOLOGY", technology });
+    dispatch({ type: "SET_LEVEL", level: level.toLowerCase() });
+    router.replace("/questions");
+  }
+
   return (
-    <>
-      {/* <section className={styles.TechLevel__success}>{level}</section> */}
-      <section className={`${styles.TechLevel} ${styles[currentStatus]}`}>
-        {level}
-      </section>
-    </>
+    <section
+      className={`${styles.TechLevel} ${styles[currentStatus]}`}
+      onClick={handleClick}
+    >
+      {level}
+    </section>
   );
 };
 
