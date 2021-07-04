@@ -16,7 +16,12 @@ const TechModal = ({ hideModal, user, techName, progress }) => {
     <section className={styles.modal_bg}>
       <section className={styles.modal_container}>
         <section className={styles.modal_header}>
-          <img id="" src={`${imgURL}.png`} alt="tech-img" />
+          <img
+            id=""
+            src={`${imgURL}.png`}
+            alt="tech-img"
+            className={styles.modal_img}
+          />
           <button
             className={styles.close_btn}
             type="button"
