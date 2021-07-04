@@ -13,7 +13,7 @@ import styles from "@styles/Profile.module.scss";
 import withAuth from "@auth";
 
 function profile() {
-  const { dispatch } = useContext(store);
+  const { dispatch, state } = useContext(store);
   const [session, loading] = useSession();
   const [user, setUser] = useState({});
   const [progress, setProgress] = useState(null);
@@ -59,7 +59,7 @@ function profile() {
       <section className={styles.profile_container}>
         <section className={styles.profile_header} />
         <img
-          src={session?.user.image || "/images/default.jpg"}
+          src={state?.user.profile_pic || "/images/default.jpg"}
           id={styles.profile_pic}
           alt="profile-img"
         />

@@ -7,6 +7,10 @@ import { EditIcon } from '@icons'
 const EditButton = () => {
   const [showEdit, setShowEdit] = useState(false);
 
+  const closeModal = () => {
+    setShowEdit(false)
+  }
+
   return (
     <div>
       <button className={styles.edit_btn} type="button" onClick={() => setShowEdit(true)}>
@@ -14,7 +18,7 @@ const EditButton = () => {
           <EditIcon size={14} color="#FFF" />
         </Tooltip>
       </button>
-      {showEdit && <EditUser hideEdit={setShowEdit} />}
+      {showEdit && <EditUser hideEdit={setShowEdit} onClose={closeModal} />}
     </div>
   )
 }
