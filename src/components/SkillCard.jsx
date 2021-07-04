@@ -3,8 +3,8 @@ import styles from "@styles/SkillCard.module.scss";
 import ProgressBar from "@components/ProgressCircleBar";
 import { ChevronRightIcon } from "@icons";
 
-const SkillCard = ({ progress, image, techName }) => (
-  <div className={styles.SkillCard}>
+const SkillCard = ({ progress, image, techName, onClick }) => (
+  <div className={styles.SkillCard} onClick={onClick} >
     <ProgressBar
       className={styles.SkillCard__Progress}
       progress={progress}

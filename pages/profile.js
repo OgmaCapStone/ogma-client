@@ -8,7 +8,6 @@ import Head from "next/head";
 import Layout from "@components/Layout";
 import TechModal from "@components/TechModal";
 import EditButton from "@components/EditButton";
-import ProgressBar from "@components/ProgressCircleBar";
 import SkillCard from "@components/SkillCard";
 import styles from "@styles/Profile.module.scss";
 import withAuth from "@auth";
@@ -18,7 +17,11 @@ function profile() {
   const [session, loading] = useSession();
   const [user, setUser] = useState({});
   const [progress, setProgress] = useState(null);
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState([false, ""]);
+
+  const showTechModal = (name) => {
+    setShowModal([true, name])
+  }
 
   function getDevLevel() {
     let level = "";
@@ -91,13 +94,8 @@ function profile() {
         {progress ? (
           progress.map((item, index) => (
             <>
-              {/* <ProgressBar
-                progress={item.percentage}
-                key={`badge-${index}`}
-                image={"https://imgur.com/PmfJQT2" + ".png"}
-                techName={item.name}
-              />{" "} */}
               <SkillCard
+                onClick={() => showTechModal(item.name)}
                 progress={item.percentage}
                 key={`badge-${index}`}
                 techName={item.name}
@@ -108,15 +106,8 @@ function profile() {
         ) : (
           <p>There&apos;s no data</p>
         )}
-        <button
-          type="button"
-          className={styles.modal_btn}
-          onClick={() => setShowModal(true)}
-        >
-          Open skill
-        </button>
-        {showModal && (
-          <TechModal hideModal={setShowModal} user={user.username} />
+        {showModal[0] && (
+          <TechModal hideModal={setShowModal} user={user.username} techName={showModal[1]} />
         )}
       </section>
     </Layout>
