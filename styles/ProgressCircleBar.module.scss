@@ -27,4 +27,7 @@
     font-weight: 500;
     transform: translateY(-0.25em);
   }
+  &__Image {
+    object-fit: fill;
+  }
 }
