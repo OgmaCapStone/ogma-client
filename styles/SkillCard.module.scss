@@ -1,0 +1,14 @@
+@import "./_variables.scss";
+@import "./_mixins.scss";
+
+.SkillCard {
+  width: 80%;
+  height: 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &__Text {
+    @include BodyTextBoldMobile;
+    text-transform: capitalize;
+  }
+}

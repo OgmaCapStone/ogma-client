@@ -9,6 +9,7 @@ import Layout from "@components/Layout";
 import TechModal from "@components/TechModal";
 import EditButton from "@components/EditButton";
 import ProgressBar from "@components/ProgressCircleBar";
+import SkillCard from "@components/SkillCard";
 import styles from "@styles/Profile.module.scss";
 import withAuth from "@auth";
 
@@ -70,8 +71,18 @@ function profile() {
         {progress ? (
           progress.map((item, index) => (
             <>
-              <ProgressBar progress={item.percentage} key={`badge-${index}`} />{" "}
-              <p>{item.name}</p>
+              {/* <ProgressBar
+                progress={item.percentage}
+                key={`badge-${index}`}
+                image={"https://imgur.com/PmfJQT2" + ".png"}
+                techName={item.name}
+              />{" "} */}
+              <SkillCard
+                progress={item.percentage}
+                key={`badge-${index}`}
+                techName={item.name}
+              />{" "}
+              {/* <p>{item.name}</p> */}
             </>
           ))
         ) : (
