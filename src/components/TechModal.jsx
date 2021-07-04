@@ -53,14 +53,6 @@ const TechModal = ({ hideModal, user, techName, progress }) => {
             user={user}
             technology={techName}
           />
-          <TechLevel
-            level="Legendary"
-            currentStatus={
-              progress[0].percentage <= 100 ? "unsuccess" : "success"
-            }
-            user={user}
-            technology={techName}
-          />
         </section>
       </section>
     </section>

@@ -83,11 +83,6 @@ function chooseDifficulty() {
                 value: "senior",
                 icon: <DotListIcon size={20} colors={["#193B3D", "#474949"]} />,
               },
-              {
-                label: "Legendary",
-                value: "legendary",
-                icon: <DotListIcon size={20} colors={["#474949", "#6DA8AA"]} />,
-              },
             ]}
             background="glass"
           />
