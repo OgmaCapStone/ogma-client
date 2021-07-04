@@ -27,9 +27,13 @@
   -moz-transition: box-shadow 0.3s ease-in-out;
   -ms-transition: box-shadow 0.3s ease-in-out;
   -o-transition: box-shadow 0.3s ease-in-out;
-  &:hover{
+  &:hover {
     color: #fff;
     background-color: $color-primary;
+  }
+  &__Progress {
+    display: flex;
+    align-items: center;
   }
   &__Wrapper {
     display: flex;
@@ -37,7 +41,12 @@
   &__Text {
     @include BodyTextBoldMobile;
     text-transform: capitalize;
-    padding-right: 10px;
+    margin-left: 1rem;
+  }
+  &__SubText {
+    @include BodyTextBoldMobile;
+    color: $color-text-grey;
+    margin-left: 1rem;
   }
   &__Icon {
     display: none;
