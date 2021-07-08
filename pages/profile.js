@@ -106,7 +106,7 @@ function profile() {
             />
           ))
         ) : (
-          <p>There&apos;s no data</p>
+          <p>You haven't passed any test.</p>
         )}
         {showModal[0] && (
           <TechModal

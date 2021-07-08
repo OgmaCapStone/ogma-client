@@ -51,7 +51,7 @@ function Home() {
       <main className={styles.results__main}>
         <div className={styles.results__info}>
           <h2 className={styles.results__title}>
-            You need all correct answers to pass.
+            You need all answers to be correct in order to pass.
           </h2>
           <h2 className={styles.results__subtitle}>Don&apos;t give up! </h2>
           <Image

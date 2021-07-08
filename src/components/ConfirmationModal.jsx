@@ -18,14 +18,14 @@ export default function ConfirmationModal({
             type="button"
             onClick={onClose}
           >
-            Cancel
+            No
           </button>
           <button
             className={styles.modal__accept}
             type="button"
             onClick={onAccept}
           >
-            Accept
+            Yes
           </button>
         </div>
       </div>
