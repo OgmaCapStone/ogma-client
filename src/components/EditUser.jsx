@@ -43,6 +43,7 @@ const EditUser = ({ hideEdit, onClose }) => {
               type="url"
               value={editPic}
               onChange={(e) => setEditPic(e.target.value)}
+              placeholder="https://your-profile-pic-image-url.png"
             />
             <section className={styles.edit_footer}>
               <button className={styles.cancel_btn} type="button" onClick={() => hideEdit(false)}>Cancel</button>
