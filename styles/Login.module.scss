@@ -47,6 +47,11 @@
       margin-left: 1.5rem;
       margin-bottom: 0.5rem;
     }
+
+    &_inline {
+      margin-bottom: 1rem;
+      margin-left: 1.5rem;
+    }
   }
 
   &__input {
@@ -56,6 +61,10 @@
       width: 100%;
       max-width: none;
     }
+  }
+
+  &__checkbox {
+    margin-right: 1rem;
   }
 
   &__submit {

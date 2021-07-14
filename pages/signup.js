@@ -106,6 +106,22 @@ function signup() {
               required
             />
           </div>
+          <div className={styles.login__group_inline}>
+            <input
+              className={styles.login__checkbox}
+              id="showPassword"
+              name="showPassword"
+              type="checkbox"
+              onChange={(e) => {
+                if (e.target.checked) {
+                  document.querySelector("#password").type = "text";
+                } else {
+                  document.querySelector("#password").type = "password";
+                }
+              }}
+            />
+            <label htmlFor="showPassword">Show password</label>
+          </div>
           <button type="submit" className={styles.login__submit}>
             Sign Up
           </button>
