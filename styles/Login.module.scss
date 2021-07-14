@@ -12,15 +12,7 @@
     padding: 3rem;
     width: fit-content;
     height: fit-content;
-    background: radial-gradient(
-      86.16% 86.16% at 18.22% 13.84%,
-      rgba(255, 255, 255, 0.8) 0%,
-      rgba(255, 255, 255, 0.1) 100%
-    );
-    border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     @media (max-width: $breakpoint-sm) {
       position: relative;
       padding: 2rem 0;
@@ -84,7 +76,7 @@
       margin: auto;
       width: 30px;
       height: 20px;
-      background-color: #f2f9fa;
+      background-color: #e4f2f4;
       z-index: -1;
       @media (max-width: $breakpoint-sm) {
         background-color: #e4f2f4;
