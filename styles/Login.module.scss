@@ -3,11 +3,6 @@
 
 .login {
   &__container {
-    position: absolute;
-    top: 0;
-    bottom: 0px;
-    left: 0;
-    right: 0;
     margin: auto;
     padding: 3rem;
     width: fit-content;
@@ -39,6 +34,11 @@
       margin-left: 1.5rem;
       margin-bottom: 0.5rem;
     }
+
+    &_inline {
+      margin-bottom: 1rem;
+      margin-left: 1.5rem;
+    }
   }
 
   &__input {
@@ -48,6 +48,10 @@
       width: 100%;
       max-width: none;
     }
+  }
+
+  &__checkbox {
+    margin-right: 1rem;
   }
 
   &__submit {

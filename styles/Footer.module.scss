@@ -3,40 +3,31 @@
 
 .footer_container {
   background: $color-primary;
-  position: fixed;
+  width: 100%;
+  padding: 2rem 0;
+  position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 80px;
 }
+
 .footer_copy {
-  @include BodyTextBoldMobile; 
+  @include BodyTextBoldMobile;
   font-size: $sizeBodyMobileSmall;
-  line-height: 120%;
   text-align: center;
   color: $color-white;
-  position: absolute;
-  height: 22px;
-  left: 4.17%;
-  right: 4.17%;
-  top: 20px;
 }
+
 .footer_terms {
   display: none;
   @include BodyTextMobile;
   font-size: $sizeBodyMobileSmall;
-  line-height: 120%;
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
-  position: absolute;
-  height: 25px;
-  left: 4.17%;
-  right: 4.17%;
-  bottom: 16px;
 }
 
-@media screen and (min-width: $breakpoint-md){
-  .footer_copy, .footer_terms {
+@media screen and (min-width: $breakpoint-md) {
+  .footer_copy,
+  .footer_terms {
     font-size: $sizeBodyMobile;
   }
 }
